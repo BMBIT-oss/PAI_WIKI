@@ -87,7 +87,9 @@ The interface allows setting the state of a partition by issuing the commands ``
 
 This interface will publish a simple dashboard to ```metrics/exchange/pai``` in a format that is readily parsed by [MQTT Dash](https://play.google.com/store/apps/details?id=net.routix.mqttdash). This will happen after the interface knows at least two Partitions. If you have only one partition, nothing will be published. If you have more than 2, only the first two will be used.
 
-To have this dashboard, install MQTT Dash, create a connection, select the connection and click the two arrows on the top right corner. Then select the topic ```metrics/exchange/pai``` and subscribe for changes. The screen should update.
+To have this dashboard, install MQTT Dash, create a connection, select the connection and click the two arrows on the top right corner. Then select the topic ```metrics/exchange/pai``` and subscribe for changes. The screen should update as shown:
+
+![mqtt_dash](https://user-images.githubusercontent.com/497717/52603920-d4984d80-2e60-11e9-9772-578b10576b3c.jpg)
 
 
 ### Signal Interface
