@@ -55,8 +55,8 @@ The following states are supported:
 The MQTT Interface allows setting some properties for individual objects by specifying the correct name. In alternative, the ```all``` keyword can be used to apply the same setting to all objects. This is useful to activate all PGMs or to Arm/Disarm all partitions.
 
 * ```paradox/control/partitions/name``` allow setting some partition properties where ```name``` identifies the partition. If the ```name``` is ```all```, all partitions will be updated. The payload can have the values ```arm```, ```arm_stay```, ```arm_sleep```, ```arm_stay_stayd```,  ```arm_sleep_stay``` or ```disarm``` and ```disarm_all```.
-* ```paradox/control/zones/name``` allow setting some zone properties where ```name``` identifies the partition. If the ```name``` is ```all```, all zones will be updated. The payload can have the values ```bypass``` and ```clear_bypass```.
-* ```paradox/control/outputs/name``` allow setting some zone properties where ```name``` identifies the partition. If the ```name``` is ```all```, all outputs will be updated. The payload can have the values ```pulse```, ```on```, ```on_override```, ```off``` or ```off_override```.
+* ```paradox/control/zones/name``` allow setting some zone properties where ```name``` identifies the zone. If the ```name``` is ```all```, all zones will be updated. The payload can have the values ```bypass``` and ```clear_bypass```.
+* ```paradox/control/outputs/name``` allow setting some PGM properties where ```name``` identifies the PGM. If the ```name``` is ```all```, all PGMs will be updated. The payload can have the values ```pulse```, ```on```, ```on_override```, ```off``` or ```off_override```.
 
 
 #### Code Toggle
