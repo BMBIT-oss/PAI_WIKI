@@ -1,0 +1,38 @@
+# HomeAssistant
+We support HomeAssistant with MQTT autodiscovery.
+Currently requires [dev](https://github.com/ParadoxAlarmInterface/pai/tree/dev) branch
+
+## PAI Configuration:
+Enable required module
+```python
+MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True
+```
+
+## HomeAssistant configuration
+In HomeAssistant configuration.yaml:
+```yaml
+mqtt:
+  broker: <ip>
+  username: <username>
+  password: <password>
+  discovery: true
+```
+
+Restart HomeAssistant.
+
+Goto Configuration -> Integrations -> MQTT: configuration.yaml see a thing with your panel model (EVO192, MG5050, ...).
+
+## Remove unused zones and partitions
+If you have a lot of "Zone ###", "Area ###", "User ###" garbage that is not used.
+
+Open PAI Configuration and configure your zone limits:
+```python
+LIMITS = {
+    'zone': list(range(1, 18)) + list(range(30,33)) + [40],     # Zones to monitor and control: 1-17,30-32,40
+    'user': range(1, 7),     # Users to consider: 1-6
+    'door': [],               # Doors to consider: ignore
+    'pgm': range(1, 6),    # Outputs to monitor and control: 1-6
+    'partition': [1,2,4,7,8], # Partitions to monitor and control: 1,2,4,7,8
+    'bus-module': [],         # Buses to monitor: ignore
+}
+```
