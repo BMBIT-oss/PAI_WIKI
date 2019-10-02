@@ -1,5 +1,6 @@
 # Homebridge
 We fully support homebridge via `mqttthing`.
+Currently requires [dev](https://github.com/ParadoxAlarmInterface/pai/tree/dev) branch
 
 ## PAI Configuration:
 You need to have MQTT enabled.
