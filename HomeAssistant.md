@@ -25,7 +25,7 @@ Goto Configuration -> Integrations -> MQTT: configuration.yaml see a thing with 
 ## Remove unused zones and partitions
 If you have a lot of "Zone ###", "Area ###", "User ###" garbage that is not used.
 
-Open PAI Configuration and configure your zone limits:
+1. Open PAI Configuration and configure your zone limits:
 ```python
 LIMITS = {
     'zone': list(range(1, 18)) + list(range(30,33)) + [40],     # Zones to monitor and control: 1-17,30-32,40
@@ -36,3 +36,8 @@ LIMITS = {
     'bus-module': [],         # Buses to monitor: ignore
 }
 ```
+
+2. Download [MQTT Explorer](http://mqtt-explorer.com/) and remove all topics under `homeassistant/alarm_control_panel`. There is a button for bulk remove.
+
+3. Restart PAI to populate `homeassistant/alarm_control_panel` again.
+4. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
