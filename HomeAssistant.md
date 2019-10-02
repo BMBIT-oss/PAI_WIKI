@@ -37,7 +37,9 @@ LIMITS = {
 }
 ```
 
-2. Download [MQTT Explorer](http://mqtt-explorer.com/) and remove all topics under `homeassistant/alarm_control_panel`. There is a button for bulk remove.
+2. Download [MQTT Explorer](http://mqtt-explorer.com/). It has a button for bulk remove topics.
+3. Remove all topics under `homeassistant/alarm_control_panel/<panel_serial_number>`. 
+4. Remove all topics under `homeassistant/binary_sensor/<panel_serial_number>`
 
-3. Restart PAI to populate `homeassistant/alarm_control_panel` again.
-4. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
+5. Restart PAI to populate `homeassistant/alarm_control_panel` again.
+6. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
