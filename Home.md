@@ -79,9 +79,10 @@ endon
 
 #### Homebridge and Homekit through MQTT
 
-This interface also provides an integration with Homebridge, when using the [homebridge-mqttthing](https://github.com/arachnetech/homebridge-mqttthing) plugin. To use it, enable the ```MQTT_HOMEBRIDGE_ENABLE``` option in the configuration file. Partitions will have a new property (```paradox/states/partitions/PARTITION_NAME/current``` by default) which will have the current state of the partition.
+This interface also provides an integration with Homebridge, when using the [homebridge-mqttthing](https://github.com/arachnetech/homebridge-mqttthing) plugin. See [Homebridge](../Homebridge)
 
-The interface allows setting the state of a partition by issuing the commands ```AWAY_ARM```, ```NIGHT_ARM```, ```STAY_ARM``` and ```DISARM```, which are mapped into a Homebridge Security System target. These commands should be sent to the standard control topic (```paradox/control/partitions/PARTITION_NAME``` by default)
+#### HomeAssistant
+HomeAssistant with MQTT autodiscovery supported. See [HomeAssistant](../HomeAssistant)
 
 #### MQTT Dash
 
@@ -92,7 +93,7 @@ To have this dashboard, install MQTT Dash, create a connection, select the conne
 ![mqtt_dash](https://user-images.githubusercontent.com/497717/52603920-d4984d80-2e60-11e9-9772-578b10576b3c.jpg)
 
 
-### Signal Interface
+#### Signal Interface
 
 The Signal Interface allows accessing major state changes and arming/disarming partitions through the [WhisperSystems](https://www.whispersystems.org/) Signal service. You will require the corresponding mobile application in your smartphone. As this interface will produce notifications to other devices, and are destined to users, only a subset of the events are sent.
 
@@ -103,7 +104,7 @@ Interface with Signal is made through [Signal-CLI](https://github.com/AsamK/sign
 The configuration setting ```SIGNAL_CONTACTS``` should contain a list with the contacts used for signal notifications. If the list is empty, the Signal module is disabled.
 
 
-### Pushbullet Interface
+#### Pushbullet Interface
 
 The Pushbullet Interface allows accessing major state changes and arming/disarming partitions. As this interface will produce notifications to other devices, and are destined to users, only a subset of the events are sent.
 
@@ -111,7 +112,7 @@ In order to use this interface, please set the relevant configuration settings. 
 
 To send a command to the alarm use the format: ```type object command```. One example would be: ```partition outside arm```. If the ```object``` is all, the command will be sent to all objects of the same type (e.g., all partitions, all zones).
 
-### GSM SIMXXX Interface
+#### GSM SIMXXX Interface
 
 The GSM Interface will notify users of major events through SMS and will accept commands through the same method.
 
@@ -119,7 +120,7 @@ In order to use this interface, please et the relevant configuration settings. T
 
 To send a command to the alarm use the format: ```type object command```. One example would be: ```partition outside arm```. If the ```object``` is all, the command will be sent to all objects of the same type (e.g., all partitions, all zones).
 
-### IP Interface
+#### IP Interface
 
 The IP Interface mimics an IP150 module, allowing the use of standard alarm management tools to interact with the panel. It supports plain sessions or encrypted session as found in later versions of the IP150 module.
 
