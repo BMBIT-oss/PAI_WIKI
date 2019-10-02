@@ -1,4 +1,4 @@
 # Home automation
-* [HomeAssistant](../HomeAssistant)
-* [Homebridge](../Homebridge)
-* [OpenHAB](../OpenHAB)
+* [HomeAssistant](./HomeAssistant)
+* [Homebridge](./Homebridge)
+* [OpenHAB](./OpenHAB)
