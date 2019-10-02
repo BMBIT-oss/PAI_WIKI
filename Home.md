@@ -84,6 +84,9 @@ This interface also provides an integration with Homebridge, when using the [hom
 #### HomeAssistant
 HomeAssistant with MQTT autodiscovery supported. See [HomeAssistant](../HomeAssistant)
 
+#### OpenHAB
+OpenHAB via MQTT. See [OpenHAB](../OpenHAB)
+
 #### MQTT Dash
 
 This interface will publish a simple dashboard to ```metrics/exchange/pai``` in a format that is readily parsed by [MQTT Dash](https://play.google.com/store/apps/details?id=net.routix.mqttdash). This will happen after the interface knows at least two Partitions. If you have only one partition, nothing will be published. If you have more than 2, only the first two will be used.
