@@ -34,6 +34,7 @@ LIMITS = {
     'pgm': range(1, 6),    # Outputs to monitor and control: 1-6
     'partition': [1,2,4,7,8], # Partitions to monitor and control: 1,2,4,7,8
     'bus-module': [],         # Buses to monitor: ignore
+    'key-switch': []
 }
 ```
 
