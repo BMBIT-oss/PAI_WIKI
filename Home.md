@@ -1,3 +1,4 @@
+# Paradox Alarm Interface (PAI)
 * [Installation](./Installation)
 * [Connection methods](./Connection-methods)
 * [Configuration](./Configuration)
