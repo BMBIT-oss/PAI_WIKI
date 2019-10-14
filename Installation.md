@@ -6,10 +6,11 @@ mkdir /opt/pai/etc
 mkdir /opt/pai/log
 
 wget https://raw.githubusercontent.com/jpbarraca/pai/master/config/pai.conf.example -O /opt/pai/etc
-edit /opt/pai/etc/pai.conf as needed, see [Configuration](./Configuration).
 
 docker run -it -v /opt/pai/etc:/etc/pai:ro -v /opt/pai/log:/var/log/pai --device=/dev/tty.YOUR_SERIAL_PORT jpbarraca/pai
 ```
+edit /opt/pai/etc/pai.conf as needed, see [Configuration](./Configuration).
+
 You also try ```jpbarraca/pai:latest```
 
 The docker images do not have support for Signal.
