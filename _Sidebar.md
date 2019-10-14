@@ -1,3 +1,4 @@
+# [Configuration](./Configuration)
 # Integrations
 * [HomeAssistant](./HomeAssistant)
 * [Homebridge](./Homebridge)
