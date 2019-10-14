@@ -1,4 +1,3 @@
-# Connection methods
 Currently we allow next connection methods:
 * [Serial connection](#serial-connection)
 * [IP150 module](#ip150-connection)
