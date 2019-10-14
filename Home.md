@@ -1,3 +1,7 @@
+* [Installation](./Installation)
+* [Connection methods](./Connection-methods)
+* [Configuration](./Configuration)
+
 
 ## Structure
 
