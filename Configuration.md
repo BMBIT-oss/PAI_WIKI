@@ -1,8 +1,7 @@
-## Configuration
-### Connection
+## Connection
 Start from [picking a connection method](./Connection-methods)
 
-### Advanced configuration
+## Advanced configuration
 See [config/pai.conf.example](config/pai.conf.example) for all configuration options.
 
 Configuration file should be placed in one of these locations:
@@ -34,7 +33,7 @@ If you use Serial connection you need to set *SERIAL_BAUD*:
 SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
 ```
 
-### Improving performance
+## Improving performance
 By default PAI will download ALL zones, users, doors, pgms, partitions and will keep track and post updates of all these assets to your integration/interface. This is a large amount of extra data.
 
 It is recommended to narrow this down and specify only assets you want to monitor.
