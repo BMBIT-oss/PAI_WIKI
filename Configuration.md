@@ -1,4 +1,8 @@
 ## Configuration
+### Connection
+Start from [picking a connection method](./Connection-methods)
+
+### Advanced configuration
 See [config/pai.conf.example](config/pai.conf.example) for all configuration options.
 
 Configuration file should be placed in one of these locations:
