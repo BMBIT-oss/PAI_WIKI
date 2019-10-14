@@ -48,3 +48,10 @@ If some requirement fail to install, this may not be critical.
 * ```chump``` is only required when using Pushover
 * ```paho_mqtt``` is only required for MQTT support
 * ```pyserial``` is only required when connecting to the panel directly through the serial port or using a GSM modem.
+
+4. Run
+```
+python3 run.py
+```
+
+If something goes wrong, you can edit the configuration file to increase the debug level.
