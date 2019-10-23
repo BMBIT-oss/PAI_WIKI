@@ -30,12 +30,15 @@ In homebridge config.json add accessory:
             "targetStateValues": [
                 "arm_stay",
                 "arm",
-                "arm_stay",
+                "arm_sleep",
                 "disarm"
             ],
             "restrictTargetState": [ 1, 3 ]
+}
 ```
-Paradox does not support `arm_night`, so we map it to `arm_stay`
+If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is an array of `targetStateValues` indexes to exclude.
+
+EVO panels do not support `arm_sleep`.
 
 Restart homebridge.
 
