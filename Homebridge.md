@@ -17,7 +17,7 @@ In homebridge config.json add accessory:
             "password": "<password>",
             "topics": {
                 "setTargetState": "paradox/control/partitions/First_floor",
-                "getTargetState": "paradox/states/partitions/First_floor/current_state",
+                "getTargetState": "paradox/states/partitions/First_floor/target_state",
                 "getCurrentState": "paradox/states/partitions/First_floor/current_state"
             },
             "currentStateValues": [
