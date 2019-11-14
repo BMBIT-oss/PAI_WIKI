@@ -28,10 +28,10 @@ In homebridge config.json add accessory:
                 "triggered"
             ],
             "targetStateValues": [
-                "arm_stay",
-                "arm",
-                "arm_sleep",
-                "disarm"
+                "armed_home",
+                "armed_away",
+                "armed_night",
+                "disarmed"
             ],
             "restrictTargetState": [ 1, 3 ]
 }
