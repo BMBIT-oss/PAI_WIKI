@@ -38,7 +38,7 @@ In homebridge config.json add accessory:
 ```
 If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is an array of `targetStateValues` indexes to exclude.
 
-EVO panels do not support `arm_sleep`.
+EVO panels do not support `armed_night`.
 
 Restart homebridge.
 
