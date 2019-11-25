@@ -2,24 +2,25 @@
 
 If you have docker running, this will be the easiest way:
 ```
-mkdir /opt/pai/etc
-mkdir /opt/pai/log
+mkdir pai/etc pai/log
 
-wget https://raw.githubusercontent.com/jpbarraca/pai/master/config/pai.conf.example -O /opt/pai/etc
+wget https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/pai.conf.example -O pai/etc/pai.conf
 
-docker run -it -v /opt/pai/etc:/etc/pai:ro -v /opt/pai/log:/var/log/pai --device=/dev/tty.YOUR_SERIAL_PORT jpbarraca/pai
+edit pai/etc/pai.conf as needed, see [Configuration](./Configuration).
+
+docker run -it \
+-v /etc/timezone:/etc/timezone:ro
+-v /etc/localtime:/etc/localtime:ro
+-v pai/etc:/etc/pai:ro \
+-v pai/log:/var/log/pai \
+--user $(id -u):$(id -g) \
+--device=/dev/tty.YOUR_SERIAL_PORT \
+jpbarraca/pai
 ```
-edit /opt/pai/etc/pai.conf as needed, see [Configuration](./Configuration).
 
 You also try ```jpbarraca/pai:latest```
 
 The docker images do not have support for Signal.
-
-or simply:
-
-```
-docker run -it -v <confFolder>/pai.conf:/etc/pai/pai.conf jpbarraca/pai
-```
 
 # Manually
 
