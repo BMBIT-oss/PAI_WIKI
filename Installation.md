@@ -18,7 +18,7 @@ docker run -it \
 paradoxalarminterface/pai:latest
 ```
 
-You also try ```paradoxalarminterface/pai:latest```
+You can also try `dev`(less stable) branch with new features ```paradoxalarminterface/pai:dev-latest```
 
 The docker images do not have support for Signal.
 
