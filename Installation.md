@@ -15,10 +15,10 @@ docker run -it \
 -v pai/log:/var/log/pai \
 --user $(id -u):$(id -g) \
 --device=/dev/tty.YOUR_SERIAL_PORT \
-jpbarraca/pai
+paradoxalarminterface/pai:latest
 ```
 
-You also try ```jpbarraca/pai:latest```
+You also try ```paradoxalarminterface/pai:latest```
 
 The docker images do not have support for Signal.
 
@@ -26,7 +26,7 @@ The docker images do not have support for Signal.
 
 1.  Download the files in this repository and place it in some directory
 ```
-git clone https://github.com/jpbarraca/pai.git
+git clone https://github.com/ParadoxAlarmInterface/pai.git
 ```
 
 2.  Copy ```config/pai.conf.example``` to ```/etc/pai/pai.conf``` and edit it to match your setup. The file uses Python syntax.
