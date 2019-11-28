@@ -40,6 +40,23 @@ If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is 
 
 EVO panels do not support `armed_night`.
 
+Motion sensors:
+```json
+{
+"accessory": "mqttthing",
+"type": "motionSensor",
+"name": "NAME-OF-ZONE",
+"url": "mqtt://<ip_address>",
+"username": "<username>",
+"password": "<password>",
+"topics": {
+    "getMotionDetected": "paradox/states/zones/NAME-OF-ZONE/open"
+},
+    "onValue": "True",
+    "offValue": "False"
+}
+```
+
 Restart homebridge.
 
 Enjoy.
