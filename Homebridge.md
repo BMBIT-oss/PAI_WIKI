@@ -5,6 +5,8 @@ Support was added in 1.1.0
 ## PAI Configuration:
 You need to have MQTT enabled.
 
+Some alieases in `MQTT_COMMAND_ALIAS` are required for hombridge to function correcltly. Make sure you've kept them if you override `MQTT_COMMAND_ALIAS` default settings.
+
 ## Homebridge configuration
 In homebridge config.json add accessory:
 ```json
