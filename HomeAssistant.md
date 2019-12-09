@@ -1,6 +1,6 @@
 # HomeAssistant
 We support HomeAssistant with MQTT autodiscovery.
-Currently requires [dev](https://github.com/ParadoxAlarmInterface/pai/tree/dev) branch
+Support was added in 1.1.0
 
 ## PAI Configuration:
 Enable required module
