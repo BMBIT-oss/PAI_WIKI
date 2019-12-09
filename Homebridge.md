@@ -40,6 +40,10 @@ In homebridge config.json add accessory:
 ```
 If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is an array of `targetStateValues` indexes to exclude.
 
+You can lookup escaped partition names like `../partitions/First_floor` in MQTTExplorer.
+
+Unescaped `../partitions/First floor` will not work.
+
 EVO panels do not support `armed_night`.
 
 Motion sensors:
