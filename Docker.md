@@ -58,7 +58,7 @@ services:
     devices:
       - "/dev/tty.YOUR_SERIAL_PORT"
     ports:
-      - "10000"
+      - "10000:10000"
 ```
 Port `10000` is required if you want to connect to PAI with Babyware.
 
