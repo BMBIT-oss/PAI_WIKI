@@ -1,5 +1,7 @@
 # Setup
 * [Installation](./Installation)
+  * [Docker](./Docker)
+  * [Manual](./Manual)
 * [Connection methods](./Connection-methods)
   * [Serial connection](./Connection-methods#serial-connection)
   * [IP150 module](./Connection-methods#ip150-connection)
@@ -8,3 +10,7 @@
 * [HomeAssistant](./HomeAssistant)
 * [Homebridge](./Homebridge)
 * [OpenHAB](./OpenHAB)
+# Interfaces
+* [IP interface](./IP Interface)
+* [Pushover](./Pushover)
+* [Pushbullet](./Pushbullet)
