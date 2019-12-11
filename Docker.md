@@ -55,8 +55,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-	devices:
-	  - "/dev/tty.YOUR_SERIAL_PORT"
+    devices:
+      - "/dev/tty.YOUR_SERIAL_PORT"
     ports:
       - "10000"
 ```
