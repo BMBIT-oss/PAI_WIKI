@@ -1,5 +1,5 @@
 # Docker
 * [Docker](./Docker#plain)
-* [Docker Compose](./Docker#compose)
+* [Docker Compose](./Docker#composer)
 # Manually
 * [Manual](./Manual)
