@@ -44,6 +44,8 @@ Create folders in your home directory.
 cd ~
 mkdir -p docker/pai/config docker/pai/logs
 cd docker
+id
+> uid=1000(pi) gid=1000(pi)
 ```
 
 Create file `docker-compose.yml`
@@ -71,5 +73,7 @@ services:
 Port `10000` is required if you want to connect to PAI with Babyware.
 
 `devices:` section is only required if you use Serial port to connect to the Panel.
+
+Populate `PUID` and `PGID` with ids you got from `id` command.
 
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
