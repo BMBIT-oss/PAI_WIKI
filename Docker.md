@@ -38,7 +38,15 @@ paradoxalarminterface/pai:latest
 See [docker documentation](https://docs.docker.com/engine/reference/run/) for explanations.
 
 ## Composer
-Edit `docker-compose.yml`
+You have already installed Docker and Docker Composer.
+Create folders in your home directory.
+```
+cd ~
+mkdir -p docker/pai/config docker/pai/logs
+cd docker
+```
+
+Create file `docker-compose.yml`
 ```
 version: '3'
 
@@ -61,5 +69,7 @@ services:
       - "10000:10000"
 ```
 Port `10000` is required if you want to connect to PAI with Babyware.
+
+`devices:` section is only required if you use Serial port to connect to the Panel.
 
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
