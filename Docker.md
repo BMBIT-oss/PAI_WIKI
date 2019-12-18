@@ -77,4 +77,21 @@ Populate `PUID` and `PGID` with ids you got from `id` command.
 
 `ports:` section and port `10000` is required if you want to connect to Panel with Babyware through PAI (PAI will proxy requests. **IP Interface**).
 
+### Running && Stopping
+```
+cd ~/docker
+# Run
+docker-compose up -d pai
+# Stop
+docker-compose stop pai
+```
+### Updating
+Change version in `services->pai->image` if you did not used `latest` or `dev-latest`
+```
+cd ~/docker
+docker-compose stop pai
+docker-compose pull pai
+docker-compose up -d pai
+```
+
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
