@@ -99,3 +99,7 @@ docker-compose up -d pai
 ```
 
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
+
+### Q&A
+> MQTT does not connect.
+Make sure you specify `MQTT_HOST` properly. Host's IP address or docker interface IP might be required there.
