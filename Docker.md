@@ -44,9 +44,7 @@ You have already installed Docker and Docker Composer.
 
 Create folders in your home directory.
 ```
-cd ~
-mkdir -p docker/pai/config docker/pai/logs
-cd docker
+mkdir -p ~/docker/pai/config ~/docker/pai/log
 id
 > uid=1000(pi) gid=1000(pi)
 ```
@@ -54,7 +52,7 @@ id
 Create config file in `~/docker/pai/config/pai.conf`
 Edit as described in [Configuration](./Configuration)
 
-Create file `docker-compose.yml`
+Create file `~/docker/docker-compose.yml`
 ```
 version: '3'
 
@@ -64,8 +62,8 @@ services:
     restart: unless-stopped
     image: paradoxalarminterface/pai:latest
     volumes:
-      - "./pai/config:/etc/pai:ro"
-      - "./pai/log:/var/log/pai:rw"
+      - "~/docker/pai/config:/etc/pai:ro"
+      - "~/docker/pai/log:/var/log/pai:rw"
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
     environment:
