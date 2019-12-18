@@ -11,6 +11,6 @@
 * [Homebridge](./Homebridge)
 * [OpenHAB](./OpenHAB)
 # Interfaces
-* [IP interface](./IP Interface)
+* [IP interface](./IPInterface)
 * [Pushover](./Pushover)
 * [Pushbullet](./Pushbullet)
