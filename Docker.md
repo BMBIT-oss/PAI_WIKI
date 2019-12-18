@@ -39,6 +39,9 @@ See [docker documentation](https://docs.docker.com/engine/reference/run/) for ex
 
 ## Composer
 You have already installed Docker and Docker Composer.
+
+**All commands should be run as a regular user (non-root).**
+
 Create folders in your home directory.
 ```
 cd ~
