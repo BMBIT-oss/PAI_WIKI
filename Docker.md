@@ -15,18 +15,24 @@ For configuration see [Configuration](./Configuration) page.
 **Note:** The docker images do not have support for Signal.
 
 ## Plain
+You have already installed Docker
+
 Create required directories, configure and run PAI.
 
 ```
-mkdir pai/config pai/log
+mkdir ~/docker/pai/config ~/docker/pai/log
 
-wget https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/pai.conf.example -O pai/config/pai.conf
+wget https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/pai.conf.example -O ~/docker/pai/config/pai.conf
+```
 
-edit pai/config/pai.conf as needed
+Create config file in `~/docker/pai/config/pai.conf`
+Edit as described in [Configuration](./Configuration)
 
+```
 docker run -it \
--v /etc/timezone:/etc/timezone:ro
--v /etc/localtime:/etc/localtime:ro
+--name pai \
+-v /etc/timezone:/etc/timezone:ro \
+-v /etc/localtime:/etc/localtime:ro \
 -v ~/docker/pai/config:/etc/pai:ro \
 -v ~/docker/pai/log:/var/log/pai \
 --user $(id -u):$(id -g) \
@@ -35,7 +41,22 @@ docker run -it \
 paradoxalarminterface/pai:latest
 ```
 
+`--device` is only required if you use Serial connection.
+
 See [docker documentation](https://docs.docker.com/engine/reference/run/) for explanations.
+
+### Stop
+```
+docker stop pai
+```
+
+### Updating
+```
+docker stop pai
+docker pull paradoxalarminterface/pai:latest
+```
+
+Then run as usual.
 
 ## Composer
 You have already installed Docker and Docker Composer.
