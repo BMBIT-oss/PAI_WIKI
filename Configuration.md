@@ -50,3 +50,5 @@ LIMITS = {
     'key-switch': [] (none)
 }
 ```
+
+In `dev` branch PAI with EVO's automatically pick enabled zones if `LIMITS['zone']` is not defined.
