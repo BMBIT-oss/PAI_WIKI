@@ -51,4 +51,4 @@ LIMITS = {
 }
 ```
 
-In `dev` branch PAI with EVO's automatically pick enabled zones if `LIMITS['zone']` is not defined.
+In `dev` branch PAI with EVO's automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']` is not defined.
