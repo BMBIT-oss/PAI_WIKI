@@ -70,10 +70,11 @@ services:
     ports:
       - "10000:10000"
 ```
-Port `10000` is required if you want to connect to PAI with Babyware.
+
+Populate `PUID` and `PGID` with ids you got from `id` command.
 
 `devices:` section is only required if you use Serial port to connect to the Panel.
 
-Populate `PUID` and `PGID` with ids you got from `id` command.
+`ports:` section and port `10000` is required if you want to connect to Panel with Babyware through PAI (PAI will proxy requests. **IP Interface**).
 
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
