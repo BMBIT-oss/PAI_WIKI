@@ -48,6 +48,9 @@ id
 > uid=1000(pi) gid=1000(pi)
 ```
 
+Create config file in `~/docker/pai/config/pai.conf`
+Edit as described in [Configuration](./Configuration)
+
 Create file `docker-compose.yml`
 ```
 version: '3'
