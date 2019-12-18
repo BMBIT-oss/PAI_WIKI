@@ -14,3 +14,5 @@
 * [IP interface](./IPInterface)
 * [Pushover](./Pushover)
 * [Pushbullet](./Pushbullet)
+# Other
+* [Compatibility](./Compatibility)
