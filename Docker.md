@@ -27,8 +27,8 @@ edit pai/config/pai.conf as needed
 docker run -it \
 -v /etc/timezone:/etc/timezone:ro
 -v /etc/localtime:/etc/localtime:ro
--v pai/config:/etc/pai:ro \
--v pai/log:/var/log/pai \
+-v ~/docker/pai/config:/etc/pai:ro \
+-v ~/docker/pai/log:/var/log/pai \
 --user $(id -u):$(id -g) \
 --device=/dev/tty.YOUR_SERIAL_PORT \
 -P \
