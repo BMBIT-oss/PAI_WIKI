@@ -24,13 +24,13 @@ Details: [MQTT Interface](./MQTT-Interface)
 
 ### Homebridge and Homekit through MQTT
 
-This interface also provides an integration with Homebridge, when using the [homebridge-mqttthing](https://github.com/arachnetech/homebridge-mqttthing) plugin. See [Homebridge](../Homebridge)
+This interface also provides an integration with Homebridge, when using the [homebridge-mqttthing](https://github.com/arachnetech/homebridge-mqttthing) plugin. See [Homebridge](./Homebridge)
 
 ### HomeAssistant
-HomeAssistant with MQTT autodiscovery supported. See [HomeAssistant](../HomeAssistant)
+HomeAssistant with MQTT autodiscovery supported. See [HomeAssistant](./HomeAssistant)
 
 ### OpenHAB via MQTT
-See [OpenHAB](../OpenHAB)
+See [OpenHAB](./OpenHAB)
 
 ### MQTT Dash
 
