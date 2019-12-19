@@ -1,4 +1,3 @@
-# Homebridge
 We fully support homebridge via `mqttthing`.
 Support was added in 1.1.0
 
