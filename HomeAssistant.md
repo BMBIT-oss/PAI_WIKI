@@ -1,4 +1,3 @@
-# HomeAssistant
 We support HomeAssistant with MQTT autodiscovery.
 Support was added in 1.1.0
 
