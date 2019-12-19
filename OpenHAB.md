@@ -1,4 +1,3 @@
-# OpenHAB
 OpenHAB configuration is a bit more complicated than Homebridge and HomeAssistant.
 
 ## PAI Configuration:
