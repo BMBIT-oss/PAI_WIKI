@@ -11,6 +11,7 @@
 * [Homebridge](./Homebridge)
 * [OpenHAB](./OpenHAB)
 # Interfaces
+* [MQTT interface](./MQTT-Interface)
 * [IP interface](./IPInterface)
 * [Pushover](./Pushover)
 * [Pushbullet](./Pushbullet)
