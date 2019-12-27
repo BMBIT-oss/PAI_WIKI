@@ -9,23 +9,16 @@ Configuration file should be placed in one of these locations:
   - /usr/local/etc/pai/pai.conf
   - ~/.local/etc/pai.conf
 
+Alternatively path to configuration file can be passed via command line (`-c` parameter) or `PAI_CONFIG_FILE` environment variable.
+
+Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file extension is right.
+
 ### EVO specifics
 As project was initially designed for SP/MG panels. EVO panels require some configuration fine tuning.
 
 Set these settings
 ``` python
-STATUS_REQUESTS = list(range(1, 6))
-
-PARTITIONS_CHANGE_NOTIFICATION_IGNORE = [
-  'arm_full',
-  'exit_delay',
-  'all_zone_closed', 
-  'ready',
-  'stay_instant_ready',
-  'force_ready',
-  'entry_delay',
-  'auto_arming_engaged'
-]
+STATUS_REQUESTS = list(range(1, 6)) # [1,2,3,4,5]
 ```
 
 If you use Serial connection you need to set *SERIAL_BAUD*:
@@ -34,7 +27,7 @@ SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
 ```
 
 ## Improving performance
-By default PAI will download ALL zones, users, doors, pgms, partitions and will keep track and post updates of all these assets to your integration/interface. This is a large amount of extra data.
+By default PAI will download only enabled zones and partitions. But ALL users, doors and pgms. It will keep track and post updates of all these assets to your integration/interface. This is a large amount of extra data.
 
 It is recommended to narrow this down and specify only assets you want to monitor.
 
@@ -51,4 +44,4 @@ LIMITS = {
 }
 ```
 
-In `dev` branch PAI with EVO's automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']` is not defined.
+PAI will automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']`(only EVO) is not defined.

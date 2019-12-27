@@ -1,5 +1,6 @@
 # Setup
 * [Installation](./Installation)
+  * [Hass.io](./HASSIO)
   * [Docker](./Docker)
   * [Manual](./Manual)
 * [Connection methods](./Connection-methods)
