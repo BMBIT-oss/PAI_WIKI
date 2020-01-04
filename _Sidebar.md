@@ -5,7 +5,7 @@
   * [Manual](./Manual)
 * [Connection methods](./Connection-methods)
   * [Serial connection](./Connection-methods#serial-connection)
-  * [IP150 module](./Connection-methods#ip150-connection)
+  * [IP module connection (IP100, IP150)](./Connection-methods#ip-module-connection-IP100-IP150)
   * [Serial Over IP](./Connection-methods#serial-over-ip-esp32)
 * [Configuration](./Configuration)
 # Integrations
