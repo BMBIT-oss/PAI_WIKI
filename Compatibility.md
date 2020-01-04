@@ -5,3 +5,4 @@ Users reported that PAI works with next firmware versions:
 * IP150 version 1.32, Panel EVO192 version 7.30 - local IP connection works
 * IP150 version 4.40.11, Panel MG5050 version 4.96 - local IP connection works
 * IP150 version 4.42, Panel SP5500 version 4.54 - local IP connection works
+* IP100 version 5.10, Panel EVO48 version 2.20 - local IP connection works
