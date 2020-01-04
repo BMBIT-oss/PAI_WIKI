@@ -1,6 +1,6 @@
 Currently we allow next connection methods:
 * [Serial connection](#serial-connection)
-* [IP150 module](#ip150-connection)
+* [IP module connection (IP100, IP150)](#ip-module-connection-IP100-IP150)
 * [Serial Over IP](#serial-over-ip-esp32) (ESP32)
 
 # Serial connection
@@ -43,8 +43,8 @@ EVO192 supports 38400(default setting for panel) or 57600. See panel's manual ho
 
 ---
 
-# IP150 connection
-PAI can communicate with the panel using IP150 connection locally or via Paradox Cloud(SWAN).
+# IP module connection (IP100, IP150)
+PAI can communicate with the panel using IP100 or IP150 connection locally or via Paradox Cloud(SWAN).
 
 Connection process is reverse engineered from Babyware connection process. Unfortunately no public documentation available about this process.
 
@@ -53,7 +53,7 @@ Firmwares supported:
 * **4.x <= version < 4.40.004** - SWAN (Paradox cloud) connection.
 * **version >= 4.40.004** - Local connection, SWAN (Paradox cloud) connection
 
-It is recommended to configure your panel to highest possible baud rate for better IP150 performance. See your panel's user manual for available settings.
+It is recommended to configure your panel to highest possible baud rate for better performance. See your panel's user manual for available settings.
 
 ## Local connection
 For IP150 firmware versions: **< 4.x and >= 4.40.004**
