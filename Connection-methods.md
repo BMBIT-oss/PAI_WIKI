@@ -2,7 +2,8 @@ Currently we allow next connection methods:
 * [Serial connection](#serial-connection)
 * [IP150 module](#ip150-connection)
 * [Serial Over IP](https://github.com/ParadoxAlarmInterface/pai/wiki/Connection-methods#esp32) (ESP32)
-## Serial connection
+
+# Serial connection
 All wire connections you do at your own risk. It is very easy to burn your board if you plug something wrong.
 
 Panel's serial port should be vacant to use this method.
@@ -10,7 +11,7 @@ Panel's serial port should be vacant to use this method.
 For serial connection you will need a USB-TTL module or a level shifter if you want to connect to RPI directly.
 Do not power you RPI from the Serial's AUX+.
 
-### Paradox serial connector on the board:
+## Paradox serial connector on the board:
 ```
 ┌───────┐
 │ Rx   ┌╵
@@ -28,7 +29,7 @@ RX/TX are 5V.
 
 For serial connection usually you will need to use TX/RX/GND. If you use optocouplers, probably TX/RX will be sufficient.
 
-#### Configuration
+### Configuration
 ```python
 # Connection Type
 CONNECTION_TYPE = 'Serial'  		# Serial or IP
@@ -40,7 +41,9 @@ SERIAL_BAUD = 9600              # 9600 for SP/MG. For EVO: Use 38400(default set
 
 EVO192 supports 38400(default setting for panel) or 57600. See panel's manual how to select a faster speed. This is main performance bottleneck, we do not want to fly slow :).
 
-## IP150 connection
+---
+
+# IP150 connection
 PAI can communicate with the panel using IP150 connection locally or via Paradox Cloud(SWAN).
 
 Connection process is reverse engineered from Babyware connection process. Unfortunately no public documentation available about this process.
@@ -52,7 +55,40 @@ Firmwares supported:
 
 It is recommended to configure your panel to highest possible baud rate for better IP150 performance. See your panel's user manual for available settings.
 
-## ESP32
+## Local connection
+For IP150 firmware versions: **< 4.x and >= 4.40.004**
+### Configuration
+```python
+# Connection Type
+CONNECTION_TYPE = 'IP'  		# Serial or IP
+
+# IP Connection Details
+IP_CONNECTION_HOST = '192.168.1.10' # IP Module address when using direct IP Connection
+IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connection
+IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
+```
+
+## Cloud connection (SWAN) _(not recommended)_
+For IP150 firmware versions: **> 4.x**
+
+Reason for _(not recommended)_:
+* Periodic dropouts/restarts
+* Possible banning (PAI keeps connection 24/7/365)
+* Hard to debug reconnection problems
+
+### Configuration
+```python
+# Connection Type
+CONNECTION_TYPE = 'IP'  		# Serial or IP
+
+IP_CONNECTION_SITEID = '<siteid>'		# SITE ID. IF defined, connection will be made through this method.
+IP_CONNECTION_EMAIL = 'myemail@email.my' 		# Email registered in the site
+IP_CONNECTION_PANEL_SERIAL = None       # Use a specific panel. Set it to None to use the first
+```
+
+---
+
+# Serial Over IP (ESP32)
 This is for noncommercial use and purely for educational purposes.
 You can damage your hardware if you are not careful, aka the usual disclaimer.
  
@@ -107,41 +143,7 @@ CONNECTION_TYPE = 'IP'  		# Serial or IP
 IP_CONNECTION_HOST = '192.168.1.10' # Address of the ESP32
 IP_CONNECTION_PORT = 23             # Port of the ESP32
 IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
-# IP_CONNECTION_BARE = True         # Used this for base Serial over TCP tunnels
-```
--- Regards CyberTza
-
-
-### Local connection
-For IP150 firmware versions: **< 4.x and >= 4.40.004**
-#### Configuration
-```python
-# Connection Type
-CONNECTION_TYPE = 'IP'  		# Serial or IP
-
-# IP Connection Details
-IP_CONNECTION_HOST = '192.168.1.10' # IP Module address when using direct IP Connection
-IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connection
-IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
+IP_CONNECTION_BARE = True           # Used this for base Serial over TCP tunnels
 ```
 
-### Cloud connection (SWAN) _(not recommended)_
-For IP150 firmware versions: **> 4.x**
-
-Reason for _(not recommended)_:
-* Periodic dropouts/restarts
-* Possible banning (PAI keeps connection 24/7/365)
-* Hard to debug reconnection problems
-
-#### Configuration
-```python
-# Connection Type
-CONNECTION_TYPE = 'IP'  		# Serial or IP
-
-IP_CONNECTION_SITEID = '<siteid>'		# SITE ID. IF defined, connection will be made through this method.
-IP_CONNECTION_EMAIL = 'myemail@email.my' 		# Email registered in the site
-IP_CONNECTION_PANEL_SERIAL = None       # Use a specific panel. Set it to None to use the first
-```
-
-
-
+Credits to @CyberTza
