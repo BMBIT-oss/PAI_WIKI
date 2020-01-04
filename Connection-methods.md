@@ -1,7 +1,7 @@
 Currently we allow next connection methods:
 * [Serial connection](#serial-connection)
 * [IP150 module](#ip150-connection)
-
+* TCP over IP Tunnel (ESP32) (#esp32)
 ## Serial connection
 All wire connections you do at your own risk. It is very easy to burn your board if you plug something wrong.
 
