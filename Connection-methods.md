@@ -53,17 +53,63 @@ Firmwares supported:
 It is recommended to configure your panel to highest possible baud rate for better IP150 performance. See your panel's user manual for available settings.
 
 ## ESP32
+This is for noncommercial use and purely for educational purposes.
+You can damage your hardware if you are not careful, aka the usual disclaimer.
+ 
 I have tested a few MCU's and have found the ESP32 DOit Wrooom32 DEVKITv1
-Very Reliable.
+Very Reliable due to the hardware Serial Port. 
+I do not use protection on mine, but if you feel like you want to OPTO isolate 
+or use logic level converters you should and it most likely recommended.
+Mine works fine for the TX and RX with no issues.
+My Wemos D1 Mini that i ran without protection only worked for a while, 
+I think it's mainly due to the the 5v connecting directly to the header.
+(if you "need" ethernet you can investigate a MCU with ethernet)
+I personally took on this for my Alarm as Lightning damaged my IP150 several times, 
+and with Wireless and a single source of power i sleep easier. 
+
+* You will need basic electronic skills and an understanding of the Arduino Framework.
+
+I will update the design in more detail if needed
+```
+ Equipment Used
+ *ESP32
+ *LM2956 Breakout board (set to 5.0V )
+ *USB Cable for ESP32 (that can be cut) [to connect between Lm and ESP]
+ *Pin connector XH2.54 (4-Pin PWM Fan Female Connector (White)) [to connect to panel]
+ *Connection for pinout below (I modified my existing IP150 Cable) 
+```
+The Pinout is as per the serial pinout above
 
 
+```
+Serial on Panel         LM2956            ESP32
+┌───────┐               
+│ Rx   ┌╵   == > == > == > == > == > == > TX2 
+│ Tx   │    == > == > == > == > == > == > RX2 
+│ GND  │    == > IN(-)   ->   OUT(-) == > USB GND 
+│ AUX+ └╷   == > IN(+)   ->   OUT(+) == > USB 5V
+└───────┘
+```
+The LM needs to be set to 5v before connecting the Node
+the USB cable needs to be connected to the 5v output and then to the ESP32 to power the ESP 
+* It is possible to connect the 5v directly to pin GND and 5v but this bypasses the protection afforded by the USB
 
+You can follow the instructions edit and load the following:
+https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiTelnetToSerial/WiFiTelnetToSerial.ino
+once done and available on your network you can connect it to your wifi and test it/locate the IP.
 
+The following settings needs to be set in your config
+```python
+# Connection Type
+CONNECTION_TYPE = 'IP'  		# Serial or IP
 
-
-
-
-
+# IP Connection Details
+IP_CONNECTION_HOST = '192.168.1.10' # Address of the ESP32
+IP_CONNECTION_PORT = 23             # Port of the ESP32
+IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
+# IP_CONNECTION_BARE = True         # Used this for base Serial over TCP tunnels
+```
+-- Regards CyberTza
 
 
 ### Local connection
