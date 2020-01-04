@@ -6,6 +6,7 @@
 * [Connection methods](./Connection-methods)
   * [Serial connection](./Connection-methods#serial-connection)
   * [IP150 module](./Connection-methods#ip150-connection)
+  * [Serial Over IP](./Connection-methods#serial-over-ip-esp32)
 * [Configuration](./Configuration)
 # Integrations
 * [HomeAssistant](./HomeAssistant)
