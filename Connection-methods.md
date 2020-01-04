@@ -52,6 +52,20 @@ Firmwares supported:
 
 It is recommended to configure your panel to highest possible baud rate for better IP150 performance. See your panel's user manual for available settings.
 
+## ESP32
+I have tested a few MCU's and have found the ESP32 DOit Wrooom32 DEVKITv1
+Very Reliable.
+
+
+
+
+
+
+
+
+
+
+
 ### Local connection
 For IP150 firmware versions: **< 4.x and >= 4.40.004**
 #### Configuration
@@ -82,3 +96,6 @@ IP_CONNECTION_SITEID = '<siteid>'		# SITE ID. IF defined, connection will be mad
 IP_CONNECTION_EMAIL = 'myemail@email.my' 		# Email registered in the site
 IP_CONNECTION_PANEL_SERIAL = None       # Use a specific panel. Set it to None to use the first
 ```
+
+
+
