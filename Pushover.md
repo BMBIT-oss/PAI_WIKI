@@ -1,11 +1,16 @@
 # Configuration
 ```python
 PUSHOVER_ENABLE = True
-PUSHOVER_KEY = 'xxxxxxxxxxxxxxxxxxx'
+PUSHOVER_KEY = 'xxxxx'
 PUSHOVER_BROADCAST_KEYS = {
-    'yyyyyyyyyyyyyyyyyyyyyy': 'My_iPhone'
+    'yyyyy': 'My_iPhone'
 }
 ```
+
+Where:
+
+- `xxxxx` is Application/API token
+- `yyyyy` is a user key on your pushover account.
 
 ## Events to send
 Default:
