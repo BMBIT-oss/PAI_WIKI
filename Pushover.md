@@ -34,4 +34,3 @@ PUSHOVER_EVENT_FILTERS = [
 ```
 
 All available *tags* can be looked up here ([EVO](https://github.com/ParadoxAlarmInterface/pai/blob/master/paradox/hardware/evo/event.py), [SP/MG](https://github.com/ParadoxAlarmInterface/pai/blob/master/paradox/hardware/spectra_magellan/event.py))
-
