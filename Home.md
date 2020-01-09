@@ -2,7 +2,7 @@
 * [Installation](./Installation)
 * [Connection methods](./Connection-methods)
 * [Configuration](./Configuration)
-
+* [FAQ](./FAQ)
 
 ## Structure
 
