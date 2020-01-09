@@ -1,6 +1,9 @@
 ## User reported firmware versions that are compatible with PAI
 
 ### EVOHD
+| IP150 | Panel |
+| —————-| ————— |
+| 4.42  | 6.91. |
 * IP150 version 4.42, Panel version 6.91 - local IP connection works
 ### EVO48
 * IP100 version 5.10, Panel version 2.20 - local IP connection works
