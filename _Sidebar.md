@@ -18,4 +18,5 @@
 * [Pushover](./Pushover)
 * [Pushbullet](./Pushbullet)
 # Other
+* [FAQ](./FAQ)
 * [Compatibility](./Compatibility)
