@@ -1,7 +1,7 @@
 ## User reported hardware including firmware versions that are compatible with PAI
 
 | Panel |IP100|     IP150     | Notes |
-| ----- |-:| -------------: | -------------: | :----- |
+| ----- |-:| -------------: | :----- |
 | **EVOHD V6.91** |-| 4.42  | local IP connection works|
 | **EVO48 V2.20** |5.10| -  | local IP connection works |
 | **EVO192 V6.90** |-| 1.32  | local IP connection works |
