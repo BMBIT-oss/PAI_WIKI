@@ -1,5 +1,7 @@
 ## User reported hardware including firmware versions that are compatible with PAI
 
+Other versions may be also be supported. If PAI works with your panel, and the model-version combination is not listed, please report that  information to us.
+
 | Panel |IP100|     IP150     | Notes |
 | ----- |-:| -------------: | :----- |
 | **EVOHD V6.91** |-| 4.42  | local IP connection works|
