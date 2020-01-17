@@ -68,7 +68,7 @@ IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connec
 IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
 ```
 
-**Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set**
+**Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud**
 
 ## Cloud connection (SWAN) _(not recommended)_
 For IP150 firmware versions: **> 4.x**
