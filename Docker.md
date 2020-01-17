@@ -87,6 +87,8 @@ services:
       - "~/docker/pai/log:/var/log/pai:rw"
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
+    user: 1000
+    group: 1000
     environment:
       - PUID=1000
       - PGID=1000
