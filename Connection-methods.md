@@ -68,6 +68,8 @@ IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connec
 IP_CONNECTION_PASSWORD = b'paradox' # IP Module password. "paradox" is factory default.
 ```
 
+**Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set**
+
 ## Cloud connection (SWAN) _(not recommended)_
 For IP150 firmware versions: **> 4.x**
 
@@ -85,6 +87,8 @@ IP_CONNECTION_SITEID = '<siteid>'		# SITE ID. IF defined, connection will be mad
 IP_CONNECTION_EMAIL = 'myemail@email.my' 		# Email registered in the site
 IP_CONNECTION_PANEL_SERIAL = None       # Use a specific panel. Set it to None to use the first
 ```
+
+`IP_CONNECTION_HOST` and `IP_CONNECTION_PORT` will be ignored.
 
 ---
 
