@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/p
 Create config file in `~/docker/pai/config/pai.conf`
 Edit as described in [Configuration](./Configuration)
 
-```
+```bash
 docker run -it \
 --name pai \
 -v /etc/timezone:/etc/timezone:ro \
@@ -46,12 +46,12 @@ paradoxalarminterface/pai:latest
 See [docker documentation](https://docs.docker.com/engine/reference/run/) for explanations.
 
 ### Stop
-```
+```bash
 docker stop pai
 ```
 
 ### Updating
-```
+```bash
 docker stop pai
 docker pull paradoxalarminterface/pai:latest
 ```
@@ -64,7 +64,7 @@ You have already installed Docker and Docker Composer.
 **All commands should be run as a regular user (non-root).**
 
 Create folders in your home directory.
-```
+```bash
 mkdir -p ~/docker/pai/config ~/docker/pai/log
 id
 > uid=1000(pi) gid=1000(pi)
@@ -74,7 +74,7 @@ Create config file in `~/docker/pai/config/pai.conf`
 Edit as described in [Configuration](./Configuration)
 
 Create file `~/docker/docker-compose.yml`
-```
+```yaml
 version: '3'
 
 services:
@@ -101,7 +101,7 @@ Populate `PUID` and `PGID` with ids you got from `id` command.
 `ports:` section and port `10000` is required if you want to connect to Panel with Babyware through PAI (PAI will proxy requests. **IP Interface**).
 
 ### Running && Stopping
-```
+```bash
 cd ~/docker
 # Run
 docker-compose up -d pai
@@ -110,7 +110,7 @@ docker-compose stop pai
 ```
 ### Updating
 Change version in `services->pai->image` if you did not used `latest` or `dev-latest`
-```
+```bash
 cd ~/docker
 docker-compose stop pai
 docker-compose pull pai
