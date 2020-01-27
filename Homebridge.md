@@ -37,7 +37,7 @@ In homebridge config.json add accessory:
             "restrictTargetState": [ 1, 3 ]
 }
 ```
-If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is an array of `targetStateValues` indexes to exclude.
+If you need `arm_stay` or `arm_sleep`, change your `restrictTargetState`. It is an array of `targetStateValues` indexes to include.
 
 You can lookup escaped partition names like `../partitions/First_floor` in MQTTExplorer.
 
