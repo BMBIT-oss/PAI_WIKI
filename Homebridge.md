@@ -43,7 +43,13 @@ You can lookup escaped partition names like `../partitions/First_floor` in MQTTE
 
 Unescaped `../partitions/First floor` will not work.
 
-EVO panels do not support `armed_night`.
+EVO panels do not support `armed_night`. you can use:
+
+```"restrictTargetState": [
+                0,
+                1,
+                3
+            ]```
 
 Motion sensors:
 ```json
