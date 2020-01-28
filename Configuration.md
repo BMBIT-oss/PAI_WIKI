@@ -27,6 +27,12 @@ SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
 ```
 
 ## Improving performance
+### Panel side
+It is recommended to check `System Options -> Communication -> “Transmit zone status on serial port”`. This way events will be received instantly.
+
+Set Baud rate to the highest possible. EVO supports 38400 (default) and 57600 which is 50% boost.
+
+### PAI side
 By default PAI will download only enabled zones and partitions. But ALL users, doors and pgms. It will keep track and post updates of all these assets to your integration/interface. This is a large amount of extra data.
 
 It is recommended to narrow this down and specify only assets you want to monitor.
