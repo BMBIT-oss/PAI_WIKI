@@ -36,3 +36,7 @@ If something goes wrong, you can edit the configuration file to increase the deb
 ```
 ./run.sh -c pai.conf
 ```
+and you can override a single variable using:
+```
+VAR_NAME=x ./run.sh
+```
