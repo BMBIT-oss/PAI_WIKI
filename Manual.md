@@ -10,7 +10,7 @@ git clone https://github.com/ParadoxAlarmInterface/pai.git
 mkdir -p /etc/pai
 cp config/pai.conf.example /etc/pai/pai.conf
 edit /etc/pai/pai.conf as needed
-python3 run.py
+./run.sh
 ```
 
 Alternatively see [Configuration](./Configuration) section for supported file locations.
@@ -29,7 +29,10 @@ If some requirement fail to install, this may not be critical.
 
 4. Run
 ```
-python3 run.py
+./run.sh
 ```
 
-If something goes wrong, you can edit the configuration file to increase the debug level.
+If something goes wrong, you can edit the configuration file to increase the debug level. You can also run PAI with an alternative config by executing:
+```
+./run.sh -c pai.conf
+```
