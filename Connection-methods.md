@@ -65,7 +65,7 @@ CONNECTION_TYPE = 'IP'  		# Serial or IP
 # IP Connection Details
 IP_CONNECTION_HOST = '192.168.1.10' # IP Module address when using direct IP Connection
 IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connection
-IP_CONNECTION_PASSWORD = 'paradox' # IP Module password. "paradox" is factory default.
+IP_CONNECTION_PASSWORD = 'paradox'  # IP Module password. "paradox" is factory default.
 ```
 
 **Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud**
@@ -146,7 +146,7 @@ CONNECTION_TYPE = 'IP'  		# Serial or IP
 # IP Connection Details
 IP_CONNECTION_HOST = '192.168.1.10' # Address of the ESP32
 IP_CONNECTION_PORT = 23             # Port of the ESP32
-IP_CONNECTION_PASSWORD = 'paradox' # IP Module password. "paradox" is factory default.
+IP_CONNECTION_PASSWORD = 'paradox'  # IP Module password. "paradox" is factory default.
 IP_CONNECTION_BARE = True           # Used this for base Serial over TCP tunnels
 ```
 
