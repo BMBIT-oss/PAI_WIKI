@@ -21,6 +21,14 @@ Restart HomeAssistant.
 
 Goto Configuration -> Integrations -> MQTT: configuration.yaml see a thing with your panel model (EVO192, MG5050, ...).
 
+### HomeAssistant Keypad
+If you want to enter a code to arm or disarm the alarm in HomeAssistant or HassKit.
+
+1. Goto `Configuration -> Customizations`.
+2. Find your `alarm_control_panel` partition.
+3. Edit `code_format` to set a code and `code_arm_required` if you do not want to enter code for arming.
+4. Now you need to enter the code to disarm and arm.
+
 ## Remove unused zones and partitions
 If you have a lot of "Zone ###", "Area ###", "User ###" garbage that is not used.
 
