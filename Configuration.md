@@ -13,14 +13,7 @@ Alternatively path to configuration file can be passed via command line (`-c` pa
 
 Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file extension is right.
 
-### EVO specifics
-As project was initially designed for SP/MG panels. EVO panels require some configuration fine tuning.
-
-Set these settings
-``` python
-STATUS_REQUESTS = list(range(1, 6)) # [1,2,3,4,5]
-```
-
+### EVO Serial baud rate
 If you use Serial connection you need to set *SERIAL_BAUD*:
 ``` python
 SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
