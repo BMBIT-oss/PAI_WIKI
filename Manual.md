@@ -1,5 +1,3 @@
-# Manual
-
 1.  Download the files in this repository and place it in some directory
 ```
 git clone https://github.com/ParadoxAlarmInterface/pai.git
@@ -39,4 +37,17 @@ If something goes wrong, you can edit the configuration file to increase the deb
 and you can override a single variable using:
 ```
 VAR_NAME=x ./run.sh
+```
+
+## Autostart on system boot using systemd
+
+Download [pai.service](https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/systemd/pai.service) and put it to `/etc/systemd/system/pai.service`
+
+Update paths in `pai.service`
+
+Enable service and start
+```
+systemctl daemon-reload
+systemctl enable pai.service
+systemctl start pai.service
 ```
