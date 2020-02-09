@@ -1,3 +1,10 @@
+# Requirements
+- Supported panel (SP/MG/EVO)
+- MQTT Broker (we tried only with `mosquitto`. Others may work) for communication with other systems
+- Python 3.6+ with pip (3.7, 3.8 recommended).
+
+## Installation
+
 1.  Download the files in this repository and place it in some directory
 ```
 git clone https://github.com/ParadoxAlarmInterface/pai.git
@@ -34,9 +41,10 @@ If something goes wrong, you can edit the configuration file to increase the deb
 ```
 ./run.sh -c pai.conf
 ```
-and you can override a single variable using:
+
+You can override configuration valiables like this:
 ```
-VAR_NAME=x ./run.sh
+VAR_NAME1=x VAR_NAME2=y ./run.sh
 ```
 
 ## Autostart on system boot using systemd

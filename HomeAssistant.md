@@ -49,3 +49,4 @@ LIMITS = {
 
 5. Restart PAI to populate `homeassistant/alarm_control_panel` again.
 6. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
+

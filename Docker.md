@@ -1,14 +1,19 @@
-# Docker
-Our project on [docker hub](https://hub.docker.com/r/paradoxalarminterface/pai).
+# Requirements
+- Supported panel (SP/MG/EVO)
+- MQTT Broker (Hass.io has an addon)
+- Docker
 
-We support `amd64`, `arm64`, `armv7`. So you can run on your linux server or a raspberry PI.
+# Installation
+See our project on [docker hub](https://hub.docker.com/r/paradoxalarminterface/pai).
+
+We support `amd64`, `arm64`, `armv7`, `armv6`, `i386`. So you can run on your linux server or a raspberry PI.
 
 Branches:
 
 * `master` branch ```paradoxalarminterface/pai:latest```
 * `dev`(less stable) branch with new features ```paradoxalarminterface/pai:dev-latest```
 
-Docker images are tagged, so if you want to use specific version you can specify that ```paradoxalarminterface/pai:1.1.0```
+Docker images are tagged, so if you want to use specific version you can specify that ```paradoxalarminterface/pai:2.1.0```
 
 For configuration see [Configuration](./Configuration) page.
 
@@ -112,14 +117,14 @@ docker-compose stop pai
 Change version in `services->pai->image` if you did not used `latest` or `dev-latest`
 ```bash
 cd ~/docker
-docker-compose stop pai
 docker-compose pull pai
+docker-compose stop pai
 docker-compose up -d pai
 ```
 
 See [docker documentation](https://docs.docker.com/compose/compose-file/) for explanations.
 
 ### Q&A
-> MQTT does not connect.
+#### MQTT does not connect:
 
-Make sure you specify `MQTT_HOST` properly. Host's IP address or docker interface IP might be required there.
+Make sure you specify `MQTT_HOST` properly. Host's IP address or docker interface IP is required. `127.0.0.1` or `localhost` will not work.
