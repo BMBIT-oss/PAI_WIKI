@@ -20,7 +20,7 @@ edit /etc/pai/pai.conf as needed
 
 Alternatively see [Configuration](./Configuration) section for supported file locations.
 
-3.  Install the python 3.6 and its requirements.
+3. Install PAI requirements.
 ```
 pip3 install -r requirements.txt
 ```
