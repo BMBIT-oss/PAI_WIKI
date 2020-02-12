@@ -44,3 +44,6 @@ LIMITS = {
 ```
 
 PAI will automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']`(only EVO) is not defined.
+
+## Problems?
+Check [FAQ](./FAQ)
