@@ -41,12 +41,12 @@ The MQTT Interface allows setting some properties for individual objects by spec
 * `paradox/control/zones/name` allow setting some zone properties where `name` identifies the zone. If the `name` is `all`, all zones will be updated. The payload can have the values `bypass` and `clear_bypass`.
 * `paradox/control/outputs/name` allow setting some PGM properties where `name` identifies the PGM. If the `name` is `all`, all PGMs will be updated. The payload can have the values `pulse` (Not on EVO), `on`, `on_override`, `off` or `off_override`, `release` (Only on EVO).
 
-`name` sanitising function:
+Check command execution result in logs.
+
+`name` sanitising function to put in the topic:
 ```bash
 python -c 'name="my partition name"; import re; print(re.sub(r"\W", "_", name).strip("_"))'
 ```
-
-Check command execution result in logs.
 
 ## Code Toggle
 
