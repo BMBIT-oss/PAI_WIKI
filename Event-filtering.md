@@ -13,9 +13,9 @@ As our target is to minimise configuration for the users we do our best to maint
 If you receive multiple notifications on the same event please create an issue so we could solve it. Me need your help here.
 
 ## Event filtering
-Most of the notifications from text interfaces that PAI implements can be configured with `*_EVENT_FILTERS` configuration parameter.
+Most of the notifications from text interfaces that PAI implements can be configured with `*_EVENT_FILTERS` configuration parameter and `*_MIN_EVENT_LEVEL`
 
-Filtering is done by using keywords that should be included or excluded in a firing event.
+Filtering is done by using keywords that should be included or excluded in a firing event and event level.
 
 **Keywords/tags include:**
 * event type: `live` or `change`
@@ -26,6 +26,21 @@ Filtering is done by using keywords that should be included or excluded in a fir
 * event object label for `live` event: Example: `Living room`
 * event object name for `live` event: Example: `Living_room`, note `_`. It is sanitized label
 * event property change names and values: if event carries some property changes they also can be matched. Example: `generated_alarm=True`. Properties can be looked up in same files as it was for tags
+
+**Event levels:**
+
+| PAI Event level | Pushover message priority | Usage                                 |
+|-----------------|---------------------------|---------------------------------------|
+| NOTSET          | lowest                    |                                       |
+| DEBUG           | lowest                    | All kind of events                    |
+| INFO            | low                       | User armed, disarmed, ...             |
+| WARN            | normal                    | Alarm restore, system/module troubles |
+| ERROR           | high                      | Do not know why we do not use it      |
+| CRITICAL        | emergency                 | Alarm                                 |
+
+See [Pushover API](https://pushover.net/api) Message Priority section.
+
+## Explanation
 
 For example default for PUSHOVER_EVENT_FILTERS:
 ```python
@@ -55,3 +70,5 @@ PUSHOVER_EVENT_FILTERS = [
    'disarm'
 ]
 ```
+
+You need to make sure `*_MIN_EVENT_LEVEL` allows your event to pass to the interface.

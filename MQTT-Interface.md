@@ -48,6 +48,16 @@ Check command execution result in logs.
 python -c 'name="my partition name"; import re; print(re.sub(r"\W", "_", name).strip("_"))'
 ```
 
+## Notifications
+
+You can ask PAI to send a notification to other text interfaces (Pushover, Pushbullet, Signal, GSM)
+
+`paradox/notifications/info`
+
+* `info` is message level. For Pushover it will convert to priority. Supported are: `NOTSET`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `CRITICAL`.
+
+Message content should be put into MQTT payload
+
 ## Code Toggle
 
 Sometimes it is useful to toggle the ARM state through a remote device, such as a NFC reader. Therefore, Partitions arm state can be toggled by issuing a special command with the format `code_toggle-code_number` (e.g., code_toggle-123456755). The `code_toggle-` keyword is constant, while the `code_number` is provided by the card (e.g., Card ID). If the code is present in the `MQTT_TOGGLE_CODES`, the partition state will be toggled.
