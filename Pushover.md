@@ -1,36 +1,35 @@
+1. On [Pushover](https://pushover.net/) website
+    1. Register
+    2. Create New Application/API Token
+    3. Take a note of API Token/Key
+    4. Register some devices.
+    5. Change device names
+    5. _(optional) Create a group_
+    6. Take a note of group or user token/key
+    7. Test via `Push a Notification` for a target group or all devices
+2. If all is fine proceed to PAI [Configuration](#Configuration)
+
 # Configuration
 ```python
 PUSHOVER_ENABLE = True
 PUSHOVER_KEY = 'xxxxx'
+
+# Send to specific devices
 PUSHOVER_BROADCAST_KEYS = {
-    'yyyyy': 'My_iPhone'
+    'yyyyy': 'My_iPhone,Wife_iPhone'
 }
+# - or -
+# Send to whole group or all devices on account
+# PUSHOVER_BROADCAST_KEYS = {
+#    'yyyyy': '*'
+#}
 ```
 
 Where:
 
-- `xxxxx` is Application/API token
-- `yyyyy` is a user key on your pushover account.
+- `xxxxx` is Application/API token/key
+- `yyyyy` is your User or Group Key on your pushover account.
+- `My_iPhone,Wife_iPhone` should be a list of comma separated device names as on pushover website. `*` can be used to send to all devices.
 
-## Events to send
-Default:
-```python
-# PUSHOVER_EVENT_FILTERS = [ # list of tags to include or exclude see hardware event.py for tag list
-#     'alarm,-restore', # or -> matches events with "alarm" tag but skips that have "restore" tag
-#     'trouble,-clock', # or
-#     'tamper'
-# ]
-```
-
-In case you want to get notifications also for `arm` and `disarm`
-```python
-PUSHOVER_EVENT_FILTERS = [
-   'alarm,-restore',
-   'trouble,-clock',
-   'tamper',
-   'arm',
-   'disarm'
-]
-```
-
-All available *tags* can be looked up here ([EVO](https://github.com/ParadoxAlarmInterface/pai/blob/master/paradox/hardware/evo/event.py), [SP/MG](https://github.com/ParadoxAlarmInterface/pai/blob/master/paradox/hardware/spectra_magellan/event.py))
+## Events/Notifications to send
+See [Event filtering](./Event-filtering)
