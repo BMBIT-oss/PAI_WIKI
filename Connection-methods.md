@@ -41,6 +41,10 @@ SERIAL_BAUD = 9600              # 9600 for SP/MG. For EVO: Use 38400(default set
 
 EVO192 supports 38400(default setting for panel) or 57600. See panel's manual how to select a faster speed. This is main performance bottleneck, we do not want to fly slow :).
 
+#### Finding right serial port in Hass.io
+
+Your Hass.io instance `Supervisor` -> `System` -> `Host system` -> `Hardware` button -> serial block
+
 ---
 
 # IP module connection (IP100, IP150)
