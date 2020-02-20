@@ -18,7 +18,15 @@ Make sure you specify `MQTT_HOST` properly. If you use hass.io own mosquitto add
 
 See [Configuration](./Configuration)
 
-`LOGGING_LEVEL_*` parameters accept numeric values ``
+`LOGGING_LEVEL_*` parameters accept numeric values:
+```
+CRITICAL = 50
+ERROR = 40
+WARNING = 30
+INFO = 20
+DEBUG = 10
+NOTSET = 0
+```
 
 ## Serial connection
 
