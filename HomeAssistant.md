@@ -26,8 +26,12 @@ If you want to enter a code to arm or disarm the alarm in HomeAssistant or HassK
 
 1. Goto `Configuration -> Customizations`.
 2. Find your `alarm_control_panel` partition.
-3. Edit `code_format` to set a code and `code_arm_required` if you do not want to enter code for arming.
+3. Edit `code` to set a code and check `code_arm_required` and `code_disarm_required`.
 4. Now you need to enter the code to disarm and arm.
+
+### Lovelace
+
+If you want more or less arming states than default `arm_home` and `arm_away` take a look at the [manual](https://www.home-assistant.io/lovelace/alarm-panel/).
 
 ## Remove unused zones and partitions
 If you have a lot of "Zone ###", "Area ###", "User ###" garbage that is not used.
