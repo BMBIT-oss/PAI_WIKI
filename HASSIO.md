@@ -38,5 +38,5 @@ SERIAL_BAUD: 9600
 
 If you get `permission denied` you need to use `chmod a+rw /dev/ttyUSB0`.
 
-# Configuration
-Check [Home Assistant Integration](./HomeAssistant)
+# Home Assistant configuration
+Check our [Home Assistant Integration page](./HomeAssistant)
