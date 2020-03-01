@@ -1,10 +1,10 @@
 We support Hass.IO with MQTT autodiscovery.
 
-# Requirements
+## Requirements
 - Supported panel (SP/MG/EVO)
 - MQTT Broker (Hass.io has an addon)
 
-# Installation
+## Installation
 
 In your Hass.IO installation add 3rd party repository: `https://github.com/ParadoxAlarmInterface/hassio-repository`
 
@@ -28,7 +28,7 @@ DEBUG = 10
 NOTSET = 0
 ```
 
-## Serial connection
+### Serial connection
 
 See [serial connection method](./Connection-methods#serial-connection). You need to specify right port and baud rate. Inspect your hass.io for available tty ports. We recommend using a cheap USB to Serial module for 5v instead of raspberry pi pins directly with a level shifter.
 ```
@@ -38,5 +38,5 @@ SERIAL_BAUD: 9600
 
 If you get `permission denied` you need to use `chmod a+rw /dev/ttyUSB0`.
 
-# Home Assistant configuration
-Check our [Home Assistant Integration page](./HomeAssistant)
+## Home Assistant configuration
+Check our [Home Assistant Integration page](./HomeAssistant#homeassistant-keypad)
