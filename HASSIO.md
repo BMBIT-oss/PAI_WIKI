@@ -38,6 +38,5 @@ SERIAL_BAUD: 9600
 
 If you get `permission denied` you need to use `chmod a+rw /dev/ttyUSB0`.
 
-# Lovelace
-
-If you want more arming states than default `arm_home` and `arm_away` take a look at the [manual](https://www.home-assistant.io/lovelace/alarm-panel/).
+# Configuration
+Check [Home Assistant Integration](./HomeAssistant)
