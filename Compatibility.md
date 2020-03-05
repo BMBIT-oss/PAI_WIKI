@@ -14,4 +14,4 @@ Other versions may be also be supported. If PAI works with your panel, and the m
 | **MG5050 V4.96-V6.80** |-| 4.40  | local IP connection works |
 | **SP5500 V4.54** |-| 4.42  | local IP connection works |
 | **SP7000 V6.90** |-| 4.42  |  local IP connection works |
-| **SP7000 V7.14** |-| 4.42  | SWAN connection works|
+| **SP7000 V7.14** |-| 4.42  | local IP & SWAN connection works|
