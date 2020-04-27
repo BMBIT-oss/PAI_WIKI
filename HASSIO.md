@@ -36,7 +36,31 @@ SERIAL_PORT = '/dev/ttyUSB0'
 SERIAL_BAUD: 9600
 ```
 
-If you get `permission denied` you need to use `chmod a+rw /dev/ttyUSB0`.
+#### Permission denied: '/dev/ttyUSB0'
+
+Credits to @juanbrunette
+
+1) Connect a screen and keyboard to your Raspberry PI running HassOS.
+2) Press Enter. You will see homeassistant login
+3) Login as `root`. You will see `ha >`
+4) Type in: `login`. You will see `#` (this means you are now on the HassOs Terminal as root)
+5) Type in: `vi /etc/udev/rules.dev/paradox.rules`
+6) Insert the following into the file by pressing `i` on your keyboard:
+Note: you need to find `idVendor` and `idProduct` of your USB to Serial device.
+
+```
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="paradox", MODE="0666"
+```
+
+7) Press Esc
+8) Type in (note the : in front of wq): `:wq`
+9) Type in: `cat paradox.rules`. You should see
+```
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="paradox", MODE="0666"
+```
+
+10) Reboot and your HASSIO or unplug and plug back your usb to serial device. The addon should now be able to access `/dev/ttyUSB0`
 
 ## Home Assistant configuration
 Check our [Home Assistant Integration page](./HomeAssistant#homeassistant-keypad)
+
