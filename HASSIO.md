@@ -44,7 +44,7 @@ Credits to @juanbrunette
 2) Press Enter. You will see homeassistant login
 3) Login as `root`. You will see `ha >`
 4) Type in: `login`. You will see `#` (this means you are now on the HassOs Terminal as root)
-5) Type in: `vi /etc/udev/rules.dev/paradox.rules`
+5) Type in: `vi /etc/udev/rules.d/paradox.rules`
 6) Insert the following into the file by pressing `i` on your keyboard:
 Note: you need to find `idVendor` and `idProduct` of your USB to Serial device.
 
