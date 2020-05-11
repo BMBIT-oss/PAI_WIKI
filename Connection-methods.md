@@ -56,7 +56,7 @@ Connection process is reverse engineered from Babyware connection process. Unfor
 
 Firmwares supported:
 * **version < 4.x** - Local connection
-* **4.x <= version < 4.40.004** - Only SWAN (Paradox cloud) connection. Consider updating your IP150 module to use local connection.
+* **4.x <= version < 4.40.004** - Only SWAN (Paradox cloud) connection. Consider updating your IP150 module's firmware to use local connection.
 * **version >= 4.40.004** - Local connection, SWAN (Paradox cloud) connection
 
 It is recommended to configure your panel to highest possible baud rate for better performance. See your panel's user manual for available settings.
