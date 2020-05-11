@@ -50,11 +50,13 @@ Your Hass.io instance `Supervisor` -> `System` -> `Host system` -> `Hardware` bu
 # IP module connection (IP100, IP150)
 PAI can communicate with the panel using IP100 or IP150 connection locally or via Paradox Cloud(SWAN).
 
+SWAN connection is possible but is not recommended. Do not abuse it with PAI or Paradox can become angry some day.
+
 Connection process is reverse engineered from Babyware connection process. Unfortunately no public documentation available about this process.
 
 Firmwares supported:
 * **version < 4.x** - Local connection
-* **4.x <= version < 4.40.004** - SWAN (Paradox cloud) connection.
+* **4.x <= version < 4.40.004** - Only SWAN (Paradox cloud) connection. Consider updating your IP150 module to use local connection.
 * **version >= 4.40.004** - Local connection, SWAN (Paradox cloud) connection
 
 It is recommended to configure your panel to highest possible baud rate for better performance. See your panel's user manual for available settings.
@@ -72,7 +74,7 @@ IP_CONNECTION_PORT = 10000          # IP Module port when using direct IP Connec
 IP_CONNECTION_PASSWORD = 'paradox'  # IP Module password. "paradox" is factory default.
 ```
 
-**Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud**
+**Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud (SWAN)**
 
 ## Cloud connection (SWAN) _(not recommended)_
 For IP150 firmware versions: **> 4.x**
