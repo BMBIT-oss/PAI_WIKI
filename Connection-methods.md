@@ -61,8 +61,11 @@ Firmwares supported:
 
 It is recommended to configure your panel to highest possible baud rate for better performance. See your panel's user manual for available settings.
 
-## Local connection
+## Local network connection
 For IP150 firmware versions: **< 4.x and >= 4.40.004**
+
+WARNING: When PAI will be connected to your IP150 module you will **not** be able to use Insite Gold. Only one connection at a time is supported by IP150 modules. There are some exceptions from this rule but details are unknown.
+
 ### Configuration
 ```python
 # Connection Type
@@ -75,6 +78,15 @@ IP_CONNECTION_PASSWORD = 'paradox'  # IP Module password. "paradox" is factory d
 ```
 
 **Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud (SWAN)**
+
+### (optional) Lock IP150 firmware updates
+1. Log in to the web interface and disable SWAN.
+2. Set your IP150 to a static IP and set gateway to 0.0.0.0
+
+This is to disable any future automatic updates as IP150 checks for updates on boot and it updates itself.
+Once you get a stable connection you do not need new firmware versions.
+
+If you want to install new firmware check [Compatibility](./Compatibility) page to make sure latest version works with PAI.
 
 ## Cloud connection (SWAN) _(not recommended)_
 For IP150 firmware versions: **> 4.x**
