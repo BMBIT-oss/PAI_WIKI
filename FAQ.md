@@ -10,6 +10,13 @@ Real reason is unknown.
 
 This error means that a status request failed. Do not panic. It is normal if it is infrequent. 5-6 status requests are sent every 10 seconds. Probably when a panel sends a live event payload at the same time when PAI waits for a status request response, panel hangs and responds much later. We do not want to wait for more than 10 seconds for this reply. So we dispose handler and go further. Next batch will surely succeed.
 
+### Failed to connect: Panel did not replied to InitiateCommunication
+1. Is you panel listed in [Compatibility](../Compatibility) page?
+2. Verify that you can connect to your panel with Babyware.
+3. If you use serial connection
+   1. Make sure you properly specified `SERIAL_BAUD` rate. In EVO you have two options.
+   2. If you skipped step 2. try swapping TX<->RX
+
 ## Other Questions
 ### Which panel is best for using with PAI
 We consider EVO192/HD are the best panels available to use with PAI. Why? Answer is simple. They have the fastest serial port with baud rate 57600(38400 default) vs 9600 on SP/MG panels. If you want IP150. Answer is the same because IP150 uses panel's serial port.
