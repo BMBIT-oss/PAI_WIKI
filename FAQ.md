@@ -12,4 +12,4 @@ This error means that a status request failed. Do not panic. It is normal if it 
 
 ## Other Questions
 ### Which panel is best for using with PAI
-We consider EVO192/HD are the best panels available to use with PAI. Why? Answer is simple. They have the fastest serial port with baud rate 57600(38400 default) vs 9600 on SP/MG panels.
+We consider EVO192/HD are the best panels available to use with PAI. Why? Answer is simple. They have the fastest serial port with baud rate 57600(38400 default) vs 9600 on SP/MG panels. If you want IP150. Answer is the same because IP150 uses panel's serial port.
