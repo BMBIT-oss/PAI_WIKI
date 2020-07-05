@@ -36,10 +36,18 @@ CONNECTION_TYPE = 'Serial'  		# Serial or IP
 
 # Serial Connection Details
 SERIAL_PORT = '/dev/ttyS1' 		# Pathname of the Serial Port
-SERIAL_BAUD = 9600              # 9600 for SP/MG. For EVO: Use 38400(default setting) or 57600 for EVO
+SERIAL_BAUD = 9600              # 9600 for SP/MG. For EVO: Use 38400(default setting) or 57600
 ```
 
+#### EVO192 Baud rate
 EVO192 supports 38400(default setting for panel) or 57600. See panel's manual how to select a faster speed. This is main performance bottleneck, we do not want to fly slow :).
+
+Got this log line?
+```
+PAI.paradox.paradox - Failed to connect: Panel did not replied to InitiateCommunication
+```
+It is possible that you have baud rate mismatch between PAI config and Panel settings.
+
 
 #### Finding right serial port in Hass.io
 
