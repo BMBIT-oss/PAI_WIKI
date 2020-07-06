@@ -4,6 +4,7 @@
    1. EVO: Section 3012
 2. Make sure you filled `PASSWORD` config parameter in the right config. See run log where config file is located.
 3. If your password has `0` try to replace it with `a`. Some panels want `0` encoded this way. `0306` -> `a3a6`.
+4. PC password is always a 4 digit number. Even if you have configured 6 digit passwords in your panel settings.
 
 ### No handler for message 5
 Real reason is unknown.
