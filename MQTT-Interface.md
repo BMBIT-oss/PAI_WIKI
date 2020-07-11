@@ -1,3 +1,15 @@
+PAI requires an external MQTT broker to be configured in pai.conf 
+
+At a minimum, you will need to configure the following MQTT settings (set MQTT_HOST to something applicable to your setup).
+
+
+MQTT_ENABLE = True                      # Enable MQTT Interface
+MQTT_HOST = localhost                   # Hostname or address for your MQTT server
+MQTT_PORT = 1883                        # TCP Port
+
+
+# 
+
 The MQTT Interface allows accessing all relevant states and setting some. The list of states will increase as the knowledge of the alarm internal memory and its states is improved.
 
 All interactions are made through a `MQTT_BASE_TOPIC`, which defaults to `paradox`. States are exposed by name with a boolean payload (True or False) and are mainly update by the alarm status messages, updated every `KEEP_ALIVE_INTERFACE` seconds.
