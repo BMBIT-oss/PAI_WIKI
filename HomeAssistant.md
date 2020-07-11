@@ -2,7 +2,7 @@ We support HomeAssistant with MQTT autodiscovery.
 Support was added in 1.1.0
 
 ## PAI Configuration:
-Enable required module
+Enable required module in pai.conf
 ```python
 MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True
 ```
