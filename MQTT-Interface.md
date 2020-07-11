@@ -3,9 +3,9 @@ PAI requires an external MQTT broker to be configured in pai.conf
 At a minimum, you will need to configure the following MQTT settings (set MQTT_HOST to something applicable to your setup).
 
 
-MQTT_ENABLE = True                      # Enable MQTT Interface
-MQTT_HOST = localhost                   # Hostname or address for your MQTT server
-MQTT_PORT = 1883                        # TCP Port
+> MQTT_ENABLE = True                      # Enable MQTT Interface
+> MQTT_HOST = localhost                   # Hostname or address for your MQTT server
+> MQTT_PORT = 1883                        # TCP Port
 
 
 # 
