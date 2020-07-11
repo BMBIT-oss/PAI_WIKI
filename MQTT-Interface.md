@@ -4,7 +4,9 @@ At a minimum, you will need to configure the following MQTT settings (set MQTT_H
 
 
 > MQTT_ENABLE = True                      # Enable MQTT Interface
+
 > MQTT_HOST = localhost                   # Hostname or address for your MQTT server
+
 > MQTT_PORT = 1883                        # TCP Port
 
 
