@@ -21,7 +21,7 @@ SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
 
 ## Improving performance
 ### Panel side
-It is recommended to check `System Options -> Communication -> “Transmit zone status on serial port”`. This way events will be received instantly.
+In Babyware it is recommended to check `System Options -> Communication -> “Transmit zone status on serial port”`. This way events will be received instantly.
 
 Set Baud rate to the highest possible. EVO supports 38400 (default) and 57600 which is 50% boost.
 
