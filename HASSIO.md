@@ -53,7 +53,7 @@ Permissions to the serial device will restore if you replug usb or restart the s
 6) Restart the addon and verify PAI can connect to the serial device.
 
 ##### Permanent solution
-7) Find your USB2Serial device's `Vendor=xxxx ProdID=xxxx` in `cat /sys/kernel/debug/usb/devices | grep Vendor -A 2` output.
+7) Find your USB2Serial device's `Vendor=xxxx ProdID=xxxx` in `cat /sys/kernel/debug/usb/devices | grep -E "^([PS]:|$)"` output.
 
 Note: if you are unsure which device. Unplug it. Run command. Then plug it back in and run command again. A device will appear in the output.
 Write down `Vendor` and `ProdID`. You will need them later.
