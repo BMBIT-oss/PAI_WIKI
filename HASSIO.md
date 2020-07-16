@@ -40,26 +40,42 @@ SERIAL_BAUD: 9600
 
 Credits to @juanbrunette
 
+##### Login to Host OS
 1) Connect a screen and keyboard to your Raspberry PI running HassOS.
 2) Press Enter. You will see homeassistant login
 3) Login as `root`. You will see `ha >`
 4) Type in: `login`. You will see `#` (this means you are now on the HassOs Terminal as root)
-5) Type in: `vi /etc/udev/rules.d/paradox.rules`
-6) Insert the following into the file by pressing `i` on your keyboard:
-Note: you need to find `idVendor` and `idProduct` of your USB to Serial device.
+
+##### Temporary solution
+Permissions to the serial device will restore if you replug usb or restart the system:
+
+5) `chmod 0666 /dev/ttyUSB0`
+6) Restart the addon and verify PAI can connect to the serial device.
+
+##### Permanent solution
+7) Find your USB2Serial device's `Vendor=xxxx ProdID=xxxx` in `cat /sys/kernel/debug/usb/devices | grep Vendor -A 2` output.
+
+Note: if you are unsure which device. Unplug it. Run command. Then plug it back in and run command again. A device will appear in the output.
+Write down `Vendor` and `ProdID`. You will need them later.
+
+8) Type in: `vi /etc/udev/rules.d/paradox.rules`
+9) Insert the following into the file by pressing `i` on your keyboard:
+
+Note: Replace `idVendor` and `idProduct` attribute values with the ones you wrote down before.
 
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="paradox", MODE="0666"
 ```
 
-7) Press Esc
-8) Type in (note the : in front of wq): `:wq`
-9) Type in: `cat paradox.rules`. You should see
+10) Press Esc
+11) Type in (note the : in front of wq): `:wq`
+12) Type in: `cat paradox.rules`. You should see
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="paradox", MODE="0666"
 ```
-
-10) Reboot and your HASSIO or unplug and plug back your usb to serial device. The addon should now be able to access `/dev/ttyUSB0`
+13) Reload udev rules: `udevadm control --reload-rules && udevadm trigger`
+14) Reboot your HASSIO or unplug and plug back your usb to serial device and restart the addon.
+15) The addon should now be able to access `/dev/ttyUSB0`
 
 ## Home Assistant configuration
 Check our [Home Assistant Integration page](./HomeAssistant#homeassistant-keypad)
