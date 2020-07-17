@@ -69,7 +69,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="
 
 10) Press Esc
 11) Type in (note the : in front of wq): `:wq`
-12) Type in: `cat paradox.rules`. You should see
+12) Type in: `cat /etc/udev/rules.d/paradox.rules`. You should see
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="paradox", MODE="0666"
 ```
