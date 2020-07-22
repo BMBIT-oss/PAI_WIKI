@@ -54,6 +54,36 @@ LOGGING_FILE: '/tmp/paradox.log'
 
 `LOGGING_DUMP_PACKETS` and `LOGGING_DUMP_MESSAGES` will only be logged is you set `LOGGING_LEVEL_<destination>` to debug
 
+## Capture Babyware <-> IP150 communication:
+Some times we ask owners of IP150 to capture Babyware <-> IP150 communication to solve a problem.
+
+There are two options how you can do it:
+- **Simple and less secure:** Do a Wireshark capture filtering by ip of your IP150 module and send it to us via a safe channel. This method has one big negative side: By doing this you agree that we will see all your configuration including user passwords, how many modules, zones and partitions you have, labels and so on. Everything that is saved on the panel and Babyware loads. We do not need all this info but this is the simplest method.
+- **Advanced and more secure:** You still do a Wireshark capture like you do in simple method but you decrypt the communication yourself using `ip150-connection-decrypt` feeding in your IP150 module password and a YAML file of TCP Flow acquired from Wireshark capture. Then you manually strip all sensitive information and keep only relevant part that is required to solve the problem. This way you do not share sensitive information with us.
+
+### How to make a capture with Wireshark
+1. Install Wireshark on the machine where you have BabyWare installed.
+2. Run Babyware and setup local IP connection if you have not done it yet.
+3. Try connecting. If succeeded close Babyware and rerun again but do not connect this time.
+3. Run Wireshark, pick your main interface and type capture filter `host 192.168.1.2`. Replacing IP address with your IP150 module IP.
+4. Start the capture
+5. Connect with Babyware
+6. Do not perform any actions in Babyware until it fully loads the data. When all events will be loaded then you can proceed.
+7. Do required actions to solve the main reason why we did this capture. Keep en eye on packet numbers in Wireshark, save them somewhere for later
+8. Stop capture
+9. Disconnect Babyware
+
+Note: Make sure you saved only one Babayware connection in one capture. Redo the steps if you failed.
+
+### If you went Advanced and you want to decrypt yourself
+
+10. Save capture as YAML: Right click on the first packet in Wireshark. `Follow` -> `TCP Stream`. Pick `Entire conversation` and `Show and save data as YAML`. Push `Save as...` button in the bottom. Save the file.
+11. We assume you have PAI installed already with all dependencies.
+    1. If you git cloned PAI. Checkout `dev` branch and pull. Run `python -m paradox.console_scripts.ip150_connection_decrypt path_to_yaml_file.yaml [ip150_password] > decrypted.txt`. `ip150_password` default is `paradox`.
+    2. If you have installed PAI via pip or `setup.py install` then you should have `ip150-connection-decrypt` command in your path. Run `ip150-connection-decrypt path_to_yaml_file.yaml [ip150_password] > decrypted.txt`. `ip150_password` default is `paradox`.
+12. Open `decrypted.txt` and remove all that you think is irrelevant.
+13. That is it! You did it. 👏 💪 
+
 ## Other Questions
 ### Which panel is best for using with PAI
 We consider EVO192/HD are the best panels available to use with PAI. Why? Answer is simple. They have the fastest serial port with baud rate 57600(38400 default) vs 9600 on SP/MG panels. If you want IP150. Answer is the same because IP150 uses panel's serial port.
