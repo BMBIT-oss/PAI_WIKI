@@ -18,6 +18,42 @@ This error means that a status request failed. Do not panic. It is normal if it 
    1. Make sure you properly specified `SERIAL_BAUD` rate. In EVO you have two options.
    2. If you skipped step 2. try swapping TX<->RX
 
+## Debug
+How to enable debug?
+
+Our debug is very verbose so we do not recommend constantly running PAI in this mode.
+
+Configuration if you are using Pythonic config:
+```
+LOGGING_DUMP_PACKETS = True
+LOGGING_DUMP_MESSAGES = True
+#LOGGING_DUMP_STATUS = True  # in rare cases
+
+# if you want to log to console
+LOGGING_LEVEL_CONSOLE = logging.DEBUG
+
+# if you want to log to a file
+LOGGING_LEVEL_FILE = logging.DEBUG
+LOGGING_FILE = '/tmp/paradox.log' 
+```
+
+Configuration if you are using HASS.io:
+```
+
+LOGGING_DUMP_PACKETS: true
+LOGGING_DUMP_MESSAGES: true
+#LOGGING_DUMP_STATUS: true  # you will need it in very rare cases
+
+# if you want to log to console (10 = debug)
+LOGGING_LEVEL_CONSOLE: 10
+
+# if you want to log to a file (10 = debug)
+LOGGING_LEVEL_FILE: 10
+LOGGING_FILE: '/tmp/paradox.log' 
+```
+
+`LOGGING_DUMP_PACKETS` and `LOGGING_DUMP_MESSAGES` will only be logged is you set `LOGGING_LEVEL_<destination>` to debug
+
 ## Other Questions
 ### Which panel is best for using with PAI
 We consider EVO192/HD are the best panels available to use with PAI. Why? Answer is simple. They have the fastest serial port with baud rate 57600(38400 default) vs 9600 on SP/MG panels. If you want IP150. Answer is the same because IP150 uses panel's serial port.
