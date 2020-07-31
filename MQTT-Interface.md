@@ -129,5 +129,4 @@ CODE = h.hexdigest()
 
 The ```CODE``` submitted is compared directly with the ```CODE``` generated internally.
 
-
-
+The ```challenge``` is published periodically to a topic configurable by ```MQTT_BASE_TOPIC}/MQTT_STATES_TOPIC/MQTT_CHALLENGE_TOPIC``` and consists of a random value. Every time a command is issued, a new challenge is generated and published. It will not be possible to repeat a command with the same ```CODE```.
