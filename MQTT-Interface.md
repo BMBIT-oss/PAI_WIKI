@@ -18,10 +18,18 @@ All interactions are made through a `MQTT_BASE_TOPIC`, which defaults to `parado
 
 After every command you can add a space plus a user identifier (e.g. ```arm JOHN```. This will help logging commands from individual users.
 
-## States
+## Internal State
+
+If the `MQTT_PUBLISH_STATUS` is set to `True`, the MQTT Interface will expose internal information. This can be used to trigger notifications or log actions with the indication of the user.
+
+*  `paradox/interface/status`: Exposes internal status of the MQTT Interface. Every command sent, as well as authentication attempts will be logged to this topic.
+
+## Panel States
 * `paradox/states/partitions/name/property`: Exposes Partition properties where `name` identifies the Partition name (e.g. Interior) and `property` identifies the property (e.g. `arm`).
 * `paradox/states/zones/name/property`: Exposes Partition properties where `name` identifies the Zone name (e.g. Kitchen) and `property` identifies the property (e.g. `open`).
 * `paradox/states/outputs/name/property`: Exposes Partition properties where `name` identifies the PGM name (e.g. Gate) and `property` identifies the property. (EVO does not have this yet)
+
+
 
 The following states are supported:
 
