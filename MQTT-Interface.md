@@ -16,7 +16,7 @@ The MQTT Interface allows accessing all relevant states and setting some. The li
 
 All interactions are made through a `MQTT_BASE_TOPIC`, which defaults to `paradox`. States are exposed by name with a boolean payload (True or False) and are mainly update by the alarm status messages, updated every `KEEP_ALIVE_INTERFACE` seconds.
 
-After every command you can add a space plus a user identifier (e.g. ```arm JOHN```. This will help logging commands from individual users.
+After every command you can add a space plus a user identifier (e.g. ```arm JOHN```). This will help logging commands from individual users.
 
 ## Internal State
 
