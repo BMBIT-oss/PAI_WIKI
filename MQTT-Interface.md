@@ -108,8 +108,7 @@ Enabling the ```MQTT_CHALLENGE_SECRET``` setting will make all further commands 
 
 All commands will work was described previously, but the command should be concatenated with ``` CODE``` (e.g. char ``` CODE```) or ``` USER CODE``` (e.g. ``` USER_A CODE```). Without these last parts, the command will be rejected.
 
-The ```MQTT_CHALLENGE_ROUNDS``` defines the number of iterations of the to calculate the response ```CODE```.
-
+The ```MQTT_CHALLENGE_ROUNDS``` defines the number of iterations of the to calculate the response ```CODE```. A larger number will increase the difficulty of breaking the challenge, but it will make the process slower. The default value is 10000.
 
 The ```CODE``` is generated as:
 ```
