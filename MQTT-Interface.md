@@ -16,6 +16,8 @@ The MQTT Interface allows accessing all relevant states and setting some. The li
 
 All interactions are made through a `MQTT_BASE_TOPIC`, which defaults to `paradox`. States are exposed by name with a boolean payload (True or False) and are mainly update by the alarm status messages, updated every `KEEP_ALIVE_INTERFACE` seconds.
 
+After every command you can add a space plus a user identifier (e.g. ```arm JOHN```. This will help logging commands from individual users.
+
 ## States
 * `paradox/states/partitions/name/property`: Exposes Partition properties where `name` identifies the Partition name (e.g. Interior) and `property` identifies the property (e.g. `arm`).
 * `paradox/states/zones/name/property`: Exposes Partition properties where `name` identifies the Zone name (e.g. Kitchen) and `property` identifies the property (e.g. `open`).
@@ -96,17 +98,17 @@ endon
 MQTT allows any client with write capabilities over the control topics to change the panel state without any information regarding its identity. Therefore PAI allows to restrict the actions so that only authenticated users can change the panel state. This authentication is overlayed on top of the MQTT authentication and independent of the MQTT authentication. It doesn't matter what authentication method you have to connect to the MQTT broker, in this mode PAI **WILL** require commands to be further authenticated. Even if the broker has no authentication and uses a plain connection, commands to the broker will be restricted to an authentication process.
 
 Authenticated mode can be enabled by setting ```MQTT_CHALLENGE_SECRET``` and ```MQTT_CHALLENGE_ROUNDS```
-If the ```MQTT_CHALLENGE_SECRET``` is a ```String``` a single challenge will be set. As an example you can set it as:
+If the ```MQTT_CHALLENGE_SECRET``` is a ```String``` a single challenge will be set for all users. In this mode it is not possible to specify the user after the command. As an example you can set it as:
 
 ```MQTT_CHALLENGE_SECRET = "supersecret"```
 
-If it is a ```Dict```, multiple challenges will be set. You can use this to define individual authentication codes for multiple users. As an example you can set it as: 
+If it is a ```Dict```, multiple challenges will be set. You can use this to define individual authentication codes for multiple users. In this case you can add the username after the command. As an example you can set it as: 
 
 ```MQTT_CHALLENGE_SECRET = {'USER_A': 'supersecret', 'USER_B': 'topsecret'}```
 
 Enabling the ```MQTT_CHALLENGE_SECRET``` setting will make all further commands to require a unique authentication code. **This will make the MQTT interface incompatible with off the shelf systems such as HomeAssistant.**
 
-All commands will work was described previously, but the command should be concatenated with ``` CODE``` (e.g. char ``` CODE```) or ``` USER CODE``` (e.g. ``` USER_A CODE```). Without these last parts, the command will be rejected.
+All commands will work has described previously, but the command should be concatenated with ``` CODE``` (e.g. char ```arm CODE```) or ``` USER CODE``` (e.g. ```arm USER_A CODE```). Without these last parts, the command will be rejected.
 
 The ```MQTT_CHALLENGE_ROUNDS``` defines the number of iterations of the to calculate the response ```CODE```. A larger number will increase the difficulty of breaking the challenge, but it will make the process slower. The default value is 10000.
 
