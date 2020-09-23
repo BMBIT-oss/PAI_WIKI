@@ -13,6 +13,7 @@ At a minimum, you will need to configure the following MQTT settings (set MQTT_H
 # 
 
 The MQTT Interface allows accessing all relevant states and setting some. The list of states will increase as the knowledge of the alarm internal memory and its states is improved.
+Note the initial caps of the syntax "True" for MQTT_Enable. Setting this to "true" will not work.
 
 All interactions are made through a `MQTT_BASE_TOPIC`, which defaults to `paradox`. States are exposed by name with a boolean payload (True or False) and are mainly update by the alarm status messages, updated every `KEEP_ALIVE_INTERFACE` seconds.
 
