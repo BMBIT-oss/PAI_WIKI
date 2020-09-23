@@ -16,6 +16,7 @@ mqtt:
   password: <password>
   discovery: true
 ```
+Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, HomeAssistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of HomeAssistant.
 
 Restart HomeAssistant.
 
