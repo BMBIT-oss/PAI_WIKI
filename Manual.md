@@ -73,3 +73,16 @@ systemctl daemon-reload
 systemctl enable pai.service
 systemctl start pai.service
 ```
+
+## Updating
+### From PyPi
+```
+pip3 install -U paradox-alarm-interface
+```
+Then restart the service
+### From repo
+```
+cd <project path>
+git pull
+```
+Then restart the service
