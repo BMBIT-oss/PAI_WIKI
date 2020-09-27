@@ -1,0 +1,18 @@
+[Unit]
+Description=Paradox Alarm Interface
+Wants=network-online.target signal.service
+After=network-online.target signal.service
+
+[Service]
+ExecStart=/usr/local/bin/pai-service -c /etc/pai/pai.conf
+# User=root #  may be needed if you use serial connection
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pai
+Type=simple
+Restart=always
+TimeoutSec=infinity
+
+[Install]
+Alias=paradox.service
+WantedBy=multi-user.target
