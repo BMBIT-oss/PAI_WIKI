@@ -6,6 +6,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 |:------:|:-------:|:---------:|:-----:|:----------:|:----:|:------:|:------------------------------:|
 |  Model | Version |   IP100   | IP150 |    Local   | SWAN | Serial |                                |
 | EVOHD  | 6.91    | -         | 4.42  | ✓          | -    | -      |                                |
+| EVOHD  | 7.30    | 4.42.002  | IP150 | ✓          | -    | -      |                                |
 | EVO48  | 2.20    | 5.10      | -     | ✓          | -    | -      |                                |
 | EVO192 | 6.86    | 5.10      | -     | ✓          | -    | -      |                                |
 | EVO192 | 6.90    | 5.1.0     | -     | ✓          | -    | -      |                                |
