@@ -63,7 +63,7 @@ VAR_NAME1=x VAR_NAME2=y ./run.sh
 
 ## Autostart on system boot using systemd
 
-Download [pai.service](https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/systemd/pai.service) and put it to `/etc/systemd/system/pai.service`
+Download [pai.service](./pai/systemd/pai.service) and put it to `/etc/systemd/system/pai.service`
 
 Update paths in `pai.service`
 
