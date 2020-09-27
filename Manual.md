@@ -37,7 +37,7 @@ Run with: `./run.sh`
 
 ### Configuration
 
-2.  Copy ```config/pai.conf.example``` to ```/etc/pai/pai.conf``` and edit it to match your setup. The file uses Python syntax.
+Copy ```config/pai.conf.example``` to ```/etc/pai/pai.conf``` and edit it to match your setup. The file uses Python syntax.
 ```
 mkdir -p /etc/pai
 cp config/pai.conf.example /etc/pai/pai.conf
@@ -46,7 +46,7 @@ edit /etc/pai/pai.conf as needed
 
 For configuration see [Configuration](./Configuration) section for supported file locations.
 
-4. Run
+### Run
 If something goes wrong, you can edit the configuration file to increase the debug level. You can also run PAI with an alternative config by executing:
 ```
 pai-service -c pai.conf
