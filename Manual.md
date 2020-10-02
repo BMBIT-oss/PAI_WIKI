@@ -6,10 +6,10 @@
 ## Installation
 ### Install from PyPi
 ```
-pip3 install paradox-alarm-interface
+sudo -H pip3 install paradox-alarm-interface
 ```
 
-This will install `pai-service` with dependencies to your PATH
+This will install `pai-service` with dependencies to your PATH. Most probably here: `/usr/local/bin/pai-service`
 
 Run with: `pai-service`
 
