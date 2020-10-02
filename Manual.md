@@ -66,6 +66,7 @@ VAR_NAME1=x VAR_NAME2=y ./run.sh
 Download [pai.service](./systemd/pai.service) and put it to `/etc/systemd/system/pai.service`
 
 Find where `pai-service` is installed: `which pai-service`
+
 Update ExecStart in `pai.service` to the right file location.
 
 Enable service and start
