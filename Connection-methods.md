@@ -119,7 +119,6 @@ IP_CONNECTION_PANEL_SERIAL = None       # Use a specific panel. Set it to None t
 ---
 
 # Serial Over IP (ESP32)
-This is for noncommercial use and purely for educational purposes.
 You can damage your hardware if you are not careful, aka the usual disclaimer.
  
 I have tested a few MCU's and have found the ESP32 DOit Wrooom32 DEVKITv1
@@ -127,11 +126,11 @@ Very Reliable due to the hardware Serial Port.
 I do not use protection on mine, but if you feel like you want to OPTO isolate 
 or use logic level converters you should and it most likely recommended.
 Mine works fine for the TX and RX with no issues.
-My Wemos D1 Mini that i ran without protection only worked for a while, 
+My Wemos D1 Mini that I ran without protection only worked for a while, 
 I think it's mainly due to the the 5v connecting directly to the header.
 (if you "need" ethernet you can investigate a MCU with ethernet)
 I personally took on this for my Alarm as Lightning damaged my IP150 several times, 
-and with Wireless and a single source of power i sleep easier. 
+and with Wireless and a single source of power I sleep easier. 
 
 * You will need basic electronic skills and an understanding of the Arduino Framework.
 
