@@ -16,7 +16,7 @@ mqtt:
   password: <password>
   discovery: true
 ```
-Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, HomeAssistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of HomeAssistant.
+Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, HomeAssistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of HomeAssistant. All partitions, zones and pgms will be made available.
 
 Restart HomeAssistant.
 
@@ -55,3 +55,30 @@ LIMITS = {
 5. Restart PAI to populate `homeassistant/alarm_control_panel` again.
 6. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
 
+## Custom notifications and automations
+
+PAI supports several methods to deliver instant messages. However, if you are interested in using HomeAssistant to deliver custom messages, or to trigger other automations based on any event, you may use the raw event feed.
+
+The following automation, provided by [@rjcds](https://github.com/rjcds), sends a custom message through pushover with the name of the user that armed/disarmed the panel. This is a great way of sending messages in your own language.
+
+```yaml
+- alias: ArmedBy
+  trigger:
+    platform: mqtt
+    topic: 'paradox/events/raw'
+  condition:
+    condition: template
+    value_template: >
+      {{ trigger.payload_json['change']['arm'] == True or
+         trigger.payload_json['change']['arm'] == False }}
+  action:
+    service: notify.pushover
+    data:
+      message: >
+        {% if trigger.payload_json['change']['arm'] == True -%}
+          House armed by {{ trigger.payload_json['message'][17:-12] }}
+        {%- else -%}
+          House disarmed by {{ trigger.payload_json['message'][17:-12] }}
+        {%- endif %}
+
+```
