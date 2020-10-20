@@ -93,7 +93,7 @@ when
 then
   val value = if (receivedCommand == ON) "arm" else "disarm"
   val partition = transform("REGEX", "Paradox_Partition_(\\w+)_Armed", triggeringItem.name)
-  val topic = "paradox/control/partitions/" + partition + "/arm"
+  val topic = "paradox/control/partitions/" + partition
 
   val actions = getActions("mqtt","mqtt:broker:main")
   actions.publishMQTT(topic, value)
