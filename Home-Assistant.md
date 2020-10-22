@@ -1,4 +1,4 @@
-We support Hass.IO with MQTT autodiscovery.
+We support Home Assistant with MQTT autodiscovery.
 
 ## Requirements
 - Supported panel (SP/MG/EVO)
@@ -12,7 +12,7 @@ Install `Paradox Alarm Interface` version `1.3.1+` from there.
 
 Add new `pai` user in mosquitto for PAI to use. Check your mosquitto addon manual.
 
-Configure the addon config. All configuration parameters from [pai.conf.example](https://github.com/ParadoxAlarmInterface/pai/blob/master/config/pai.conf.example) should be supported even if they do not exist in the default configuration. Hass.io web UI wants configuration in yaml. But our `pai.conf.example` is a python file. There may be differences in format. Make sure you understand what is YAML.
+Configure the addon config. All configuration parameters from [pai.conf.example](https://github.com/ParadoxAlarmInterface/pai/blob/master/config/pai.conf.example) should be supported even if they do not exist in the default configuration. Home Assistant web UI wants configuration in yaml. But our `pai.conf.example` is a python file. There may be differences in format. Make sure you understand what is YAML.
 
 Make sure you specify `MQTT_HOST` properly. If you use hass.io own mosquitto addon `core-mosquitto` should work. `127.0.0.1` or `localhost` will not work.
 
@@ -41,10 +41,10 @@ SERIAL_BAUD: 9600
 Credits to @juanbrunette
 
 ##### Login to Host OS
-1) Connect a screen and keyboard to your Raspberry PI running HassOS.
+1) Connect a screen and keyboard to your Raspberry PI running Home Assistant Core.
 2) Press Enter. You will see homeassistant login
 3) Login as `root`. You will see `ha >`
-4) Type in: `login`. You will see `#` (this means you are now on the HassOs Terminal as root)
+4) Type in: `login`. You will see `#` (this means you are now on the Home Assistant Core Terminal as root)
 
 ##### Temporary solution
 Permissions to the serial device will restore if you replug usb or restart the system:
