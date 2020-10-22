@@ -2,7 +2,7 @@ We support Home Assistant with MQTT autodiscovery.
 
 ## Requirements
 - Supported panel (SP/MG/EVO)
-- MQTT Broker (Hass.io has an addon)
+- MQTT Broker (Home Assistant has an [Mosquitto broker add-on](https://github.com/home-assistant/hassio-addons/tree/master/mosquitto))
 
 ## Installation
 
