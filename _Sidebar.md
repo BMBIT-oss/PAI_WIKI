@@ -1,6 +1,6 @@
 # Setup
 * [Installation](./Installation)
-  * [Home Assistant Core](./HASSIO)
+  * [Home Assistant](./HASSIO)
   * [Docker](./Docker)
   * [Manual](./Manual)
 * [Connection methods](./Connection-methods)
