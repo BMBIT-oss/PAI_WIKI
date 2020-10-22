@@ -78,5 +78,5 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="
 15) The addon should now be able to access `/dev/ttyUSB0`
 
 ## Home Assistant configuration
-Check our [Home Assistant Integration page](./HomeAssistant#homeassistant-keypad)
+Check our [Home Assistant Integration page](./Home-Assistant-integration#homeassistant-keypad)
 
