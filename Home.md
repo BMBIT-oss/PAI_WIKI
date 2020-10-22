@@ -27,7 +27,7 @@ Details: [MQTT Interface](./MQTT-Interface)
 This interface also provides an integration with Homebridge, when using the [homebridge-mqttthing](https://github.com/arachnetech/homebridge-mqttthing) plugin. See [Homebridge](./Homebridge)
 
 ### Home Assistant
-Home Assistant with MQTT autodiscovery supported. See [HomeAssistant](./HomeAssistant)
+Home Assistant with MQTT autodiscovery supported. See [Home Assistant](./Home-Assistant)
 
 ### OpenHAB via MQTT
 See [OpenHAB](./OpenHAB)
