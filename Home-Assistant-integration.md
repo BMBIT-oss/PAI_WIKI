@@ -1,4 +1,4 @@
-We support HomeAssistant with MQTT autodiscovery.
+We support Home Assistant with MQTT autodiscovery.
 Support was added in 1.1.0
 
 ## PAI Configuration:
@@ -7,8 +7,8 @@ Enable required module in pai.conf
 MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True
 ```
 
-## HomeAssistant configuration
-In HomeAssistant configuration.yaml:
+## Home Assistant configuration
+In Home Assistant configuration.yaml:
 ```yaml
 mqtt:
   broker: <ip>
@@ -16,14 +16,14 @@ mqtt:
   password: <password>
   discovery: true
 ```
-Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, HomeAssistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of HomeAssistant. All partitions, zones and pgms will be made available.
+Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, Home Assistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of Home Assistant. All partitions, zones and pgms will be made available.
 
-Restart HomeAssistant.
+Restart Home Assistant.
 
 Goto Configuration -> Integrations -> MQTT: configuration.yaml see a thing with your panel model (EVO192, MG5050, ...).
 
-### HomeAssistant Keypad
-If you want to enter a code to arm or disarm the alarm in HomeAssistant or HassKit.
+### Home Assistant Keypad
+If you want to enter a code to arm or disarm the alarm in Home Assistant or HassKit.
 
 1. Goto `Configuration -> Customizations`.
 2. Find your `alarm_control_panel` partition.
@@ -53,11 +53,11 @@ LIMITS = {
 4. Remove all topics under `homeassistant/binary_sensor/<panel_serial_number>`
 
 5. Restart PAI to populate `homeassistant/alarm_control_panel` again.
-6. Restart HomeAssistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
+6. Restart Home Assistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
 
 ## Custom notifications and automations
 
-PAI supports several methods to deliver instant messages. However, if you are interested in using HomeAssistant to deliver custom messages, or to trigger other automations based on any event, you may use the raw event feed.
+PAI supports several methods to deliver instant messages. However, if you are interested in using Home Assistant to deliver custom messages, or to trigger other automations based on any event, you may use the raw event feed.
 
 The following automation, provided by [@rjcds](https://github.com/rjcds), sends a custom message through pushover with the name of the user that armed/disarmed the panel. This is a great way of sending messages in your own language.
 
