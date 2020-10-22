@@ -9,7 +9,7 @@
   * [Serial Over IP](./Connection-methods#serial-over-ip-esp32)
 * [Configuration](./Configuration)
 # Integrations
-* [HomeAssistant](./Home-Assistant-integration)
+* [Home Assistant](./Home-Assistant-integration)
 * [Homebridge](./Homebridge)
 * [OpenHAB](./OpenHAB)
 # Interfaces
