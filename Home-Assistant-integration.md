@@ -1,26 +1,20 @@
 We support Home Assistant with MQTT autodiscovery.
 Support was added in 1.1.0
 
-## PAI Configuration:
-Enable required module in pai.conf
+## Paradox Alarm Interface (PAI) add-on configuration:
+Enable the required module in the add-on configuration tab and all the other parameters.
 ```python
 MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True
 ```
 
 ## Home Assistant configuration
-In Home Assistant configuration.yaml:
-```yaml
-mqtt:
-  broker: <ip>
-  username: <username>
-  password: <password>
-  discovery: true
-```
-Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, Home Assistant will now auto discover the zones and partitions automatically. No additional yaml codes are required for configruation.yaml of Home Assistant. All partitions, zones and pgms will be made available.
+If using Home Assistant's default mqtt broker there is no need to modify configuration.yaml
+
+Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, Home Assistant will now auto-discover all zones, partitions and PGMs automatically. No additional settings are required for configruation.yaml. 
 
 Restart Home Assistant.
 
-Goto Configuration -> Integrations -> MQTT: configuration.yaml see a thing with your panel model (EVO192, MG5050, ...).
+Goto Configuration -> Integrations -> You should see a device with your panel model (EVO192, MG5050, ...).
 
 ### Home Assistant Keypad
 If you want to enter a code to arm or disarm the alarm in Home Assistant or HassKit.
