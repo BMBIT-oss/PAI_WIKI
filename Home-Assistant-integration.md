@@ -32,7 +32,7 @@ If you want more or less arming states than default `arm_home` and `arm_away` ta
 You can limit (filter) the zones, partitions, users or PGMs that are exposed to Home Assistant as it can become cluttered. To do so you hvave to use the `LIMITS` option in your configuration:
 
 1. Stop the PAI add-on
-1. Open PAI add-on configuration and configure your zone limits:
+1. Open PAI add-on configuration and configure your zone limits (only listed items will be exposed):
 ```yaml
 LIMITS:
   user:
