@@ -28,26 +28,39 @@ If you want to enter a code to arm or disarm the alarm in Home Assistant or Hass
 
 If you want more or less arming states than default `arm_home` and `arm_away` take a look at the [manual](https://www.home-assistant.io/lovelace/alarm-panel/).
 
-## Remove unused zones and partitions
-If you have a lot of "Zone ###", "Area ###", "User ###" garbage that is not used.
+## Remove unused zones, partitions, users or PGMs
+You can limit (filter) the zones, partitions, users or PGMs that are exposed to Home Assistant as it can become cluttered. To do so you hvave to use the `LIMITS` option in your configuration:
 
-1. Open PAI Configuration and configure your zone limits:
-```python
-LIMITS = {
-    'user': range(1, 7),     # Users to consider: 1-6
-    'door': [],               # Doors to consider: ignore
-    'pgm': range(1, 6),    # Outputs to monitor and control: 1-6
-    'bus-module': [],         # Buses to monitor: ignore
-    'key-switch': []
-}
+1. Stop the PAI add-on
+1. Open PAI add-on configuration and configure your zone limits:
+```yaml
+LIMITS:
+  user:
+    - 1
+    - 2
+    - 3
+  pgm:
+    - 3
+  door:
+    - null
+  module:
+    - null
+  repeater:
+    - null
+  partition:
+    - 1
+    - 2
+    - 3
+    - 4
 ```
 
-2. Download [MQTT Explorer](http://mqtt-explorer.com/). It has a button for bulk remove topics.
-3. Remove all topics under `homeassistant/alarm_control_panel/<panel_serial_number>`. 
-4. Remove all topics under `homeassistant/binary_sensor/<panel_serial_number>`
+1. Download [MQTT Explorer](http://mqtt-explorer.com/) or similar and remove the following topics:
+  - all topics under `homeassistant/alarm_control_panel/<panel_serial_number>` 
+  - all topics under `homeassistant/binary_sensor/<panel_serial_number>`
+  - any other unnecessary topics form `switch` or `sensor`
 
-5. Restart PAI to populate `homeassistant/alarm_control_panel` again.
-6. Restart Home Assistant to reset discovered results. Maybe you will need to remove MQTT Integration and add it again.
+5. Restart PAI add-on to populate `homeassistant/alarm_control_panel` again.
+6. Restart Home Assistant to reset discovered results (this might be unnecessary).
 
 ## Custom notifications and automations
 
