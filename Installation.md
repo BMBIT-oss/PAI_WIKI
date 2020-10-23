@@ -1,4 +1,4 @@
-# Hass.io
+# Home Assistsant (formerly Hass.io)
 * [Hass.io](./HASSIO)
 
 # Docker
