@@ -1,5 +1,5 @@
-## User reported hardware including firmware versions that are compatible with PAI
-
+## User reported hardware attempted with PAI
+### Supported
 Other versions may be also supported. If PAI works with your panel, and the model-version combination is not listed, please edit the next table.
 
 |  Panel |         | IP module |       | Connection |      |        |              Notes             |
@@ -20,6 +20,9 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | SP6000 | 6.80    | -         | 5.02  | ✓          | ✓    | -      | More stable with SWAN disabled |
 | SP7000 | 6.90    | -         | 4.42  | ✓          | -    | -      |                                |
 | SP7000 | 7.14.2  | -         | 5.2.9 | ✓          | ✓    | -      |                                |
+
+### Unsupported:
+* MG6250 - unsupported protocol
 
 
 ***
