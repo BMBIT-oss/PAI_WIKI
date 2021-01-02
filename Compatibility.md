@@ -20,6 +20,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | SP5500 | 2.40.1  | -         | -     | -          | -    | ✓      |                                |
 | SP5500 | 4.54    | -         | 4.42  | ✓          | -    | -      |                                |
 | SP6000 | 6.80    | -         | 5.02  | ✓          | ✓    | -      | More stable with SWAN disabled |
+| SP7000 | 5.20    | -         | 4.40  | ✓          | -    | -      |                                |
 | SP7000 | 6.90    | -         | 4.42  | ✓          | -    | -      |                                |
 | SP7000 | 7.14.2  | -         | 5.2.9 | ✓          | ✓    | -      |                                |
 
