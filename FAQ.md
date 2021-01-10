@@ -5,6 +5,7 @@
 2. Make sure you filled `PASSWORD` config parameter in the right config. See run log where config file is located.
 3. If your password has `0` try to replace it with `a`. Some panels want `0` encoded this way. `0306` -> `a3a6`.
 4. PC password is always a 4 digit number. Even if you have configured 6 digit passwords in your panel settings.
+5. If PAI has made many connection attempts with wrong password Panel can lock all further connection attempts for some time period. Give it some rest and retry.
 
 ### No handler for message 5
 Real reason is unknown.
