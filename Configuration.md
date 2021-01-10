@@ -1,6 +1,9 @@
 ## Connection
 Start from [picking a connection method](./Connection-methods)
 
+## PC Password
+PAI requires **4 digit** PC Password. It is **not** a user password and **not** an installer password. That password is used to connect to your panel with Babyware. Default password is usually `0000`. You might need to contact your installer to get this password or if you have an installer password you can lookup it up in right programming section on Keypad. If you know the password is right and you still get AuthenticationFailed then check [FAQ](./FAQ#authentication-failed-wrong-password)
+
 ## Advanced configuration
 See [config/pai.conf.example](https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/pai.conf.example) for all configuration options.
 
