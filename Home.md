@@ -4,6 +4,10 @@
 * [Configuration](./Configuration)
 * [FAQ](./FAQ)
 
+## Requirements
+* Your panels [PC Password](./Configuration#pc-password)
+* Serial or IP150 connection.
+
 ## Structure
 
 * __Panels__ : Represents a generic panel that is realized by classes adequate to the specific model (MG/SP/EVO)
