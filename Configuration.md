@@ -2,7 +2,7 @@
 Start from [picking a connection method](./Connection-methods)
 
 ## PC Password
-PAI requires **4 digit** PC Password. It is **not** a user password and **not** an installer password. That password is used to connect to your panel with Babyware. Default password is usually `0000`. You might need to contact your installer to get this password or if you have an installer password you can lookup it up in right programming section on Keypad. If you know the password is right and you still get AuthenticationFailed then check [FAQ](./FAQ#authentication-failed-wrong-password)
+PAI requires a **4 digit** PC Password. It is **not** a user password and **not** an installer password. That password is used to connect to your panel with Babyware. Default password is usually `0000`. You might need to contact your installer to get this password or if you have an installer password you can lookup it up in right programming section on Keypad. If you know the password is right and you still get `AuthenticationFailed` then check [FAQ](./FAQ#authentication-failed-wrong-password)
 
 ## Advanced configuration
 See [config/pai.conf.example](https://raw.githubusercontent.com/ParadoxAlarmInterface/pai/master/config/pai.conf.example) for all configuration options.
@@ -17,16 +17,17 @@ Alternatively path to configuration file can be passed via command line (`-c` pa
 Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file extension is right.
 
 ### EVO Serial baud rate
-If you use Serial connection you need to set *SERIAL_BAUD*:
+If you use Serial connection you need to set `SERIAL_BAUD`:
 ``` python
 SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
 ```
 
 ## Improving performance
 ### Panel side
-In Babyware it is recommended to check `System Options -> Communication -> “Transmit zone status on serial port”`. This way events will be received instantly.
+In Babyware it is recommended to check `System Options -> Communication -> “Transmit zone status on serial port”`. This way events will be automatically sent by the panel and received without much delay.
 
-Set Baud rate to the highest possible. EVO supports 38400 (default) and 57600 which is 50% boost.
+Set the Baud Rate to the highest possible value. EVO supports 38400 (default) and 57600 which is a 50% boost. 
+MG5050 and other MG panels only support 9600, but don't fret over it. In these panels events only have 37 bytes and take ~500 microseconds to be sent.
 
 ### PAI side
 By default PAI will download only enabled zones and partitions. But ALL users, doors and pgms. It will keep track and post updates of all these assets to your integration/interface. This is a large amount of extra data.
@@ -46,7 +47,7 @@ LIMITS = {
 }
 ```
 
-PAI will automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']`(only EVO) is not defined.
+In EVO, PAI will automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']` is not defined.
 
 ## Problems?
 Check [FAQ](./FAQ)
