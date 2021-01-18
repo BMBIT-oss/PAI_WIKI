@@ -1,5 +1,5 @@
-# Home Assistsant (formerly Hass.io)
-* [Home Assistsant via PAI add-on](./Home-Assistant)
+# Home Assistant (formerly Hass.io)
+* [Home Assistant via PAI add-on](./Home-Assistant)
 
 # Docker
 * [Docker](./Docker#plain)
