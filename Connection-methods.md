@@ -176,3 +176,5 @@ IP_CONNECTION_BARE = True           # Used this for base Serial over TCP tunnels
 ```
 
 Credits to @CyberTza
+
+Some more info in this ticket: https://github.com/ParadoxAlarmInterface/pai/issues/198#issuecomment-771388699
