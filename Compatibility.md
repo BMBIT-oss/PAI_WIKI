@@ -8,10 +8,11 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | EVOHD  | 4.50    | -         | -         | -          | -    | no     | Did not work with ESP32. [#198](https://github.com/ParadoxAlarmInterface/pai/issues/198)  |
 | EVOHD  | 6.91    | -         | 4.42      | ✓          | -    | -      |                                |
 | EVOHD  | 7.30    | 4.42.002  | IP150     | ✓          | -    | -      |                                |
+| EVOHD  | 7.31    | -         | -         | ✓          | -    | ✓      | Works with Serial via ESP32    |
 | EVO48  | 2.20    | 5.10      | -         | ✓          | -    | -      |                                |
 | EVO192 | 2.66    | 5.10.06   | -         | ✓          | -    | -      |                                |
 | EVO192 | 6.86    | 5.10      | -         | ✓          | -    | -      |                                |
-| EVO192 | 6.90    | 5.1.0     | 1.32      | ✓          | -    | ✓      |                                |                              |
+| EVO192 | 6.90    | 5.1.0     | 1.32      | ✓          | -    | ✓      |                                |
 | EVO192 | 7.30    | -         | 1.32      | ✓          | -    | ✓      |                                |
 | EVO192 | 7.30    | -         | 4.42      | ✓          | -    | -      |                                |
 | MG5050 | 4.96    | -         | 4.40      | ✓          | -    | ✓      |                                |
