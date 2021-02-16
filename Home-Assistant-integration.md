@@ -66,7 +66,7 @@ LIMITS:
 
 PAI supports several methods to deliver instant messages. However, if you are interested in using Home Assistant to deliver custom messages, or to trigger other automations based on any event, you may use the raw event feed.
 
-The following automation, provided by [@rjcds](https://github.com/rjcds), sends a custom message through pushover with the name of the user that armed/disarmed the panel. This is a great way of sending messages in your own language.
+The following automation, provided by [@rjcds](https://github.com/rjcds), sends a custom message through pushover with the name of the user that armed/disarmed the panel. This is a great way of sending messages in your own language. Feel free to change the service to notify.notify instead of notify.pushover.
 
 ```yaml
 - alias: ArmedBy
@@ -88,4 +88,30 @@ The following automation, provided by [@rjcds](https://github.com/rjcds), sends 
           House disarmed by {{ trigger.payload_json['message'][17:-12] }}
         {%- endif %}
 
+```
+
+Similarly, the following automation will notify critical events as both homeassistant notifications and persistent notifications, for instance zones being tampered or power trouble.
+
+```yaml
+- alias: AlarmCritical
+  trigger:
+    platform: mqtt
+    topic: 'paradox/events/raw'
+  condition:
+    condition: template
+    value_template: >
+      {{ trigger.payload_json['level'] == 'CRITICAL' }}
+  action:
+    - service: persistent_notification.create
+      data:
+        title: >
+          {{ trigger.payload_json['label'] }} {{ trigger.payload_json['message'] }}
+        message: >
+          {{ trigger.payload_json['label'] }} {{ trigger.payload_json['message'] }} {{ trigger.payload_json['key'] }}
+    - service: notify.notify
+      data:
+        title: >
+          {{ trigger.payload_json['label'] }} {{ trigger.payload_json['message'] }}
+        message: >
+          {{ trigger.payload_json['label'] }} {{ trigger.payload_json['message'] }} {{ trigger.payload_json['key'] }}  
 ```
