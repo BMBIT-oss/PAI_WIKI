@@ -23,6 +23,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | SP5500 | 4.54    | -         | 4.42      | ✓          | -    | -      |                                |
 | SP5500 | 7.14.002| -         | -         | ✓          | -    | ✓      | USB to Serial via FTDI         |
 | SP6000 | 6.80    | -         | 5.02      | ✓          | ✓    | -      | More stable with SWAN disabled |
+| SP7000 | 5.18    | 5.20      | -         | ✓          | -    | -      |                                |
 | SP7000 | 5.20    | -         | 4.40      | ✓          | -    | -      |                                |
 | SP7000 | 6.90    | -         | 4.42      | ✓          | -    | -      |                                |
 | SP7000 | 7.14.2  | -         | 5.2.9     | ✓          | ✓    | -      |                                |
