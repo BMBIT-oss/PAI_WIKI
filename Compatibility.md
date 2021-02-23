@@ -18,7 +18,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | MG5050 | 4.96    | -         | 4.40      | ✓          | -    | ✓      |                                |
 | MG5050 | 6.80    | -         | 4.40      | ✓          | -    | ✓      |                                |
 | MG5050 | 7.01.012| -         | 5.02.019  | ✓          | -    | -      | IP150 firmware 5.02.019        |
-| SP4000 | 5.20    | -         | -         | ✓          | -    | ✓      |                                |
+| SP4000 | 5.20    | -         | 5.02.019  | ✓          | -    | ✓      |                                |
 | SP5500 | 2.40.1  | -         | -         | -          | -    | ✓      |                                |
 | SP5500 | 4.54    | -         | 4.42      | ✓          | -    | -      |                                |
 | SP5500 | 7.14.002| -         | -         | ✓          | -    | ✓      | USB to Serial via FTDI         |
