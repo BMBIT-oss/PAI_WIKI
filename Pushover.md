@@ -28,6 +28,8 @@ PUSHOVER_BROADCAST_KEYS = [{
 ```
 YAML:
 ```yaml
+PUSHOVER_ENABLE: true
+PUSHOVER_KEY: xxxxx
 PUSHOVER_BROADCAST_KEYS:
  - user_key: yyyy
    devices: '*'
