@@ -15,14 +15,22 @@ PUSHOVER_ENABLE = True
 PUSHOVER_KEY = 'xxxxx'
 
 # Send to specific devices
-PUSHOVER_BROADCAST_KEYS = {
-    'yyyyy': 'My_iPhone,Wife_iPhone'
-}
+PUSHOVER_BROADCAST_KEYS = [{
+    'user_key':'yyyyy',
+    'devices': 'My_iPhone,Wife_iPhone'
+}]
 # - or -
 # Send to whole group or all devices on account
-# PUSHOVER_BROADCAST_KEYS = {
-#    'yyyyy': '*'
-#}
+# PUSHOVER_BROADCAST_KEYS = [{
+#    'user_key':'yyyyy',
+#    'devices': '*'
+#}]
+```
+YAML:
+```yaml
+PUSHOVER_BROADCAST_KEYS:
+ - user_key: yyyy
+   devices: '*'
 ```
 
 Where:
