@@ -68,6 +68,7 @@ PAI supports several methods to deliver instant messages. However, if you are in
 
 The following automation, provided by [@rjcds](https://github.com/rjcds), sends a custom message through pushover with the name of the user that armed/disarmed the panel. This is a great way of sending messages in your own language. Feel free to change the service to notify.notify instead of notify.pushover.
 
+
 ```yaml
 - alias: ArmedBy
   trigger:
@@ -82,13 +83,29 @@ The following automation, provided by [@rjcds](https://github.com/rjcds), sends 
     service: notify.pushover
     data:
       message: >
-        {% if trigger.payload_json['change']['arm'] == True -%}
-          House armed by {{ trigger.payload_json['message'][17:-12] }}
+        {% if 'master' in trigger.payload_json['message'] and trigger.payload_json['change']['arm'] == True -%}
+            House armed by {{ trigger.payload_json['message'][17:-12] }}
+        {%- elif 'master' in trigger.payload_json['message'] and trigger.payload_json['change']['arm'] == False -%}
+            House disarmed by {{ trigger.payload_json['message'][19:-12] }}
+        {%- elif trigger.payload_json['change']['arm'] == True -%}
+            House armed by {{ trigger.payload_json['message'][17:-5] }}
         {%- else -%}
-          House disarmed by {{ trigger.payload_json['message'][17:-12] }}
+            House disarmed by {{ trigger.payload_json['message'][19:-5] }}
         {%- endif %}
 
 ```
+
+The raw messages being parsed are:
+```
+Arming YYYY with XXXX master code
+Unarming YYYY with XXXX master code
+Arming YYYY with ZZZZ code
+Unarming YYYY with ZZZZ code
+```
+
+You will need to adjust the string slicing if your partition name is not 4 characters long (eg `Home`) 
+
+
 
 Similarly, the following automation will notify critical events as both homeassistant notifications and persistent notifications, for instance zones being tampered or power trouble.
 
