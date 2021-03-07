@@ -97,10 +97,10 @@ The following automation, provided by [@rjcds](https://github.com/rjcds), sends 
 
 The raw messages being parsed are:
 ```
-Arming YYYY with XXXX master code
-Unarming YYYY with XXXX master code
-Arming YYYY with ZZZZ code
-Unarming YYYY with ZZZZ code
+Arming XXXX with YYYY master code
+Unarming XXXX with YYYY master code
+Arming XXXX with ZZZZ code
+Unarming XXXX with ZZZZ code
 ```
 
 You will need to adjust the string slicing if your partition name is not 4 characters long (eg `Home`) 
