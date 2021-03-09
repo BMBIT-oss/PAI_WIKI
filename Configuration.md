@@ -18,13 +18,21 @@ Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file exte
 
 ### Label encodings
 ```yaml
-LABEL_ENCODING: paradox-ee
+LABEL_ENCODING: paradox-en
 ```
 
-Supported:
-* paradox-de
-* paradox-de
-* paradox-de
+Additionally supported:
+* `paradox-de`: German
+* `paradox-ee`: Estonian
+* `paradox-en`: English
+* `paradox-hu`: Hungarian
+* `paradox-pl`: Polish
+* `paradox-pt`: Portuguese
+* `paradox-ro`: Romanian
+* `paradox-ru`: Russian
+* `paradox-tr`: Turkish
+
+Thanks @tekand
 
 ### EVO Serial baud rate
 If you use Serial connection you need to set `SERIAL_BAUD`:
