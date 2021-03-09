@@ -16,6 +16,16 @@ Alternatively path to configuration file can be passed via command line (`-c` pa
 
 Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file extension is right.
 
+### Label encodings
+```yaml
+LABEL_ENCODING: paradox-ee
+```
+
+Supported:
+* paradox-de
+* paradox-de
+* paradox-de
+
 ### EVO Serial baud rate
 If you use Serial connection you need to set `SERIAL_BAUD`:
 ``` python
