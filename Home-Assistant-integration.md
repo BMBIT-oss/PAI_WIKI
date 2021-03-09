@@ -3,14 +3,14 @@ Support was added in 1.1.0
 
 ## Paradox Alarm Interface (PAI) add-on configuration:
 Enable the required module in the add-on configuration tab and all the other parameters.
-```python
-MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True
+```yaml
+MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE: true
 ```
 
 ## Home Assistant configuration
 If using Home Assistant's default mqtt broker there is no need to modify configuration.yaml
 
-Note that after setting MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE = True, Home Assistant will now auto-discover all zones, partitions and PGMs automatically. No additional settings are required for configruation.yaml. 
+Note that after setting `MQTT_HOMEASSISTANT_AUTODISCOVERY_ENABLE: true`, Home Assistant will now auto-discover all zones, partitions and PGMs automatically. No additional settings are required for configruation.yaml. 
 
 Restart Home Assistant.
 
@@ -35,23 +35,12 @@ You can limit (filter) the zones, partitions, users or PGMs that are exposed to 
 2. Open PAI add-on configuration and configure your zone limits (only listed items will be exposed):
 ```yaml
 LIMITS:
-  user:
-    - 1
-    - 2
-    - 3
-  pgm:
-    - 3
-  door:
-    - null
-  module:
-    - null
-  repeater:
-    - null
-  partition:
-    - 1
-    - 2
-    - 3
-    - 4
+  user: '1-3'
+  pgm: '3'
+  door: ''
+  module: ''
+  repeater: ''
+  partition: '1,2,3-4'
 ```
 
 3. Download [MQTT Explorer](http://mqtt-explorer.com/) or similar and remove the following topics:
