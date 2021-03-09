@@ -37,8 +37,8 @@ Thanks @tekand
 
 ### EVO Serial baud rate
 If you use Serial connection you need to set `SERIAL_BAUD`:
-``` python
-SERIAL_BAUD = 38400 # or 57600 if you have changed default setting in Babyware
+```yaml
+SERIAL_BAUD: 38400 # or 57600 if you have changed default setting in Babyware
 ```
 
 ## Improving performance
@@ -54,19 +54,18 @@ By default PAI will download only enabled zones and partitions. But ALL users, d
 It is recommended to narrow this down and specify only assets you want to monitor.
 
 All examples that are possible are listed here:
-```python
-LIMITS = {
-    'zone': list(range(1, 18)) + list(range(30,33)) + [40],     # Zones to monitor and control (1-17,30-32,40)
-    'user': range(1, 7),     # Users to consider (1-6)
-    'door': [],               # Doors to consider (none)
-    'pgm': range(1, 6),    # Outputs to monitor and control (1-5)
-    'partition': [1,2,4,7,8], # Partitions to monitor and control (1,2,4,7,8)
-    'bus-module': [],         # Buses to monitor (none)
-    'key-switch': [] (none)
-}
+```yaml
+LIMITS:
+    zone: '1-17,30-32,40'   # Zones to monitor and control (1-17,30-32,40)
+    user: '1-6'             # Users to consider (1-6)
+    door: ''                # Doors to consider (none)
+    pgm: '1-5'              # Outputs to monitor and control (1-5)
+    partition: 'auto'       # Partitions to monitor and control (autodetect)
+    bus-module: ''          # Buses to monitor (none)
+    key-switch: ''          # (none)
 ```
 
-In EVO, PAI will automatically pick enabled partitions and zones if `LIMITS['zone']` and `LIMITS['partition']` is not defined.
+In EVO, PAI can automatically detect enabled partitions and zones if you set them to `auto`.
 
 ## Problems?
 Check [FAQ](./FAQ)
