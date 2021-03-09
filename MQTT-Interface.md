@@ -3,11 +3,11 @@ PAI requires an external MQTT broker to be configured in pai.conf
 At a minimum, you will need to configure the following MQTT settings (set MQTT_HOST to something applicable to your setup).
 
 
-> MQTT_ENABLE = True                      # Enable MQTT Interface
+> MQTT_ENABLE: True                      # Enable MQTT Interface
 
-> MQTT_HOST = localhost                   # Hostname or address for your MQTT server
+> MQTT_HOST: 192.168.1.2                 # Hostname or address for your MQTT server
 
-> MQTT_PORT = 1883                        # TCP Port
+> MQTT_PORT: 1883                        # TCP Port
 
 
 # 
@@ -109,11 +109,11 @@ MQTT allows any client with write capabilities over the control topics to change
 Authenticated mode can be enabled by setting ```MQTT_CHALLENGE_SECRET``` and ```MQTT_CHALLENGE_ROUNDS```
 If the ```MQTT_CHALLENGE_SECRET``` is a ```String``` a single challenge will be set for all users. In this mode it is not possible to specify the user after the command. As an example you can set it as:
 
-```MQTT_CHALLENGE_SECRET = "supersecret"```
+```MQTT_CHALLENGE_SECRET: "supersecret"```
 
 If it is a ```Dict```, multiple challenges will be set. You can use this to define individual authentication codes for multiple users. In this case you can add the username after the command. As an example you can set it as: 
 
-```MQTT_CHALLENGE_SECRET = {'USER_A': 'supersecret', 'USER_B': 'topsecret'}```
+```MQTT_CHALLENGE_SECRET: {'USER_A': 'supersecret', 'USER_B': 'topsecret'}```
 
 Enabling the ```MQTT_CHALLENGE_SECRET``` setting will make all further commands to require a unique authentication code. **This will make the MQTT interface incompatible with off the shelf systems such as HomeAssistant.**
 
