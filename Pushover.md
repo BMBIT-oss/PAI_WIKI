@@ -10,21 +10,19 @@
 2. If all is fine proceed to PAI [Configuration](#Configuration)
 
 # Configuration
-```python
-PUSHOVER_ENABLE = True
-PUSHOVER_KEY = 'xxxxx'
+```yaml
+PUSHOVER_ENABLE: true
+PUSHOVER_KEY: 'xxxxx'
 
 # Send to specific devices
-PUSHOVER_BROADCAST_KEYS = [{
-    'user_key':'yyyyy',
-    'devices': 'My_iPhone,Wife_iPhone'
-}]
+PUSHOVER_BROADCAST_KEYS:
+  - user_key: 'yyyyy'
+    devices: 'My_iPhone,Wife_iPhone'
 # - or -
 # Send to whole group or all devices on account
-# PUSHOVER_BROADCAST_KEYS = [{
-#    'user_key':'yyyyy',
-#    'devices': '*'
-#}]
+# PUSHOVER_BROADCAST_KEYS:
+#   - user_key: 'yyyyy'
+#     devices: '*'
 ```
 YAML:
 ```yaml
