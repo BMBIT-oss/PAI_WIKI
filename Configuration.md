@@ -21,7 +21,7 @@ Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file exte
 LABEL_ENCODING: paradox-en
 ```
 
-Additionally supported:
+Additionally supported (2.5.0+):
 * `paradox-de`: German
 * `paradox-ee`: Estonian
 * `paradox-en`: English
