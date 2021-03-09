@@ -65,8 +65,8 @@ NOTSET = 0
 ### Serial connection
 
 See [serial connection method](./Connection-methods#serial-connection). You need to specify right port and baud rate. Inspect your hass.io for available tty ports. We recommend using a cheap USB to Serial module for 5v instead of raspberry pi pins directly with a level shifter.
-```
-SERIAL_PORT = '/dev/ttyUSB0'
+```yaml
+SERIAL_PORT: '/dev/ttyUSB0'
 SERIAL_BAUD: 9600
 ```
 
