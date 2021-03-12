@@ -21,10 +21,13 @@ Configuration can be `.json`, `.yaml` or a `.py|.conf` file. Make sure file exte
 LABEL_ENCODING: paradox-en
 ```
 
-Additionally supported (2.5.0+):
+Additionally supported (2.5.2+):
+* `paradox-ar`: Arabic
 * `paradox-de`: German
-* `paradox-ee`: Estonian
+* `paradox-el`: Greek
 * `paradox-en`: English
+* `paradox-et`: Estonian
+* `paradox-he`: Hebrew
 * `paradox-hu`: Hungarian
 * `paradox-pl`: Polish
 * `paradox-pt`: Portuguese
