@@ -31,6 +31,7 @@ Additionally supported (2.5.0+):
 * `paradox-ro`: Romanian
 * `paradox-ru`: Russian
 * `paradox-tr`: Turkish
+* `cp936`: Chinese
 * or any from standard encodings https://docs.python.org/3/library/codecs.html#standard-encodings
 
 Thanks @tekand
