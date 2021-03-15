@@ -89,8 +89,8 @@ services:
     volumes:
       - "~/docker/pai/config:/etc/pai:ro"
       - "~/docker/pai/log:/var/log/pai:rw"
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - TZ=EUROPE/Tallinn
     user: "1000:1000"
     devices:
       - "/dev/tty.YOUR_SERIAL_PORT"
