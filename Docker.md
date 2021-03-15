@@ -36,8 +36,6 @@ Edit as described in [Configuration](./Configuration)
 ```bash
 docker run -it \
 --name pai \
--v /etc/timezone:/etc/timezone:ro \
--v /etc/localtime:/etc/localtime:ro \
 -v ~/docker/pai/config:/etc/pai:ro \
 -v ~/docker/pai/log:/var/log/pai \
 -e "TZ=EUROPE/Tallinn" \
