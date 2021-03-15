@@ -38,6 +38,8 @@ docker run -it \
 --name pai \
 -v ~/docker/pai/config:/etc/pai:ro \
 -v ~/docker/pai/log:/var/log/pai \
+-v /etc/timezone:/etc/timezone:ro \
+-v /etc/localtime:/etc/localtime:ro \
 -e "TZ=EUROPE/Tallinn" \
 --user $(id -u):$(id -g) \
 --device=/dev/tty.YOUR_SERIAL_PORT \
@@ -89,6 +91,8 @@ services:
     volumes:
       - "~/docker/pai/config:/etc/pai:ro"
       - "~/docker/pai/log:/var/log/pai:rw"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
     environment:
       - TZ=EUROPE/Tallinn
     user: "1000:1000"
