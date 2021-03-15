@@ -40,6 +40,7 @@ docker run -it \
 -v /etc/localtime:/etc/localtime:ro \
 -v ~/docker/pai/config:/etc/pai:ro \
 -v ~/docker/pai/log:/var/log/pai \
+-e "TZ=EUROPE/Tallinn" \
 --user $(id -u):$(id -g) \
 --device=/dev/tty.YOUR_SERIAL_PORT \
 -P \
