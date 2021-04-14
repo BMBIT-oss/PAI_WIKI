@@ -1,5 +1,8 @@
 OpenHAB configuration is a bit more complicated than Homebridge and HomeAssistant.
 
+## Requirements
+MQTT Broker ([Mosquitto](https://mosquitto.org/) or other compatible)
+
 ## PAI Configuration:
 MQTT needs to be enabled.
 
