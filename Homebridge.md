@@ -1,6 +1,9 @@
 We fully support homebridge via `mqttthing`.
 Support was added in 1.1.0
 
+## Requirements
+* MQTT Broker ([Mosquitto](https://mosquitto.org/) or other compatible)
+
 ## PAI Configuration:
 You need to have MQTT enabled.
 
