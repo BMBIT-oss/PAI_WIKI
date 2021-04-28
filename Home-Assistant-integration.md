@@ -19,13 +19,14 @@ Restart Home Assistant.
 
 Goto Configuration -> Integrations -> You should see a device with your panel model (EVO192, MG5050, ...).
 
-### Home Assistant Keypad
+### Make Home Assistant to ask for a code to arm/disarm (dev branch)
 If you want to enter a code to arm or disarm the alarm in Home Assistant or HassKit.
 
-1. Goto `Configuration -> Customizations`.
-2. Find your `alarm_control_panel` partition.
-3. Edit `code` to set a code and check `code_arm_required` and `code_disarm_required`.
-4. Now you need to enter the code to disarm and arm.
+1. Set `MQTT_HOMEASSISTANT_CODE` to the code you want
+2. Goto `Configuration -> Customizations`.
+3. Find your `alarm_control_panel` partition.
+4. Check `code_arm_required` and `code_disarm_required`.
+5. Now you need to enter the code to disarm and arm.
 
 ### Lovelace
 
