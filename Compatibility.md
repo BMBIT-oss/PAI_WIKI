@@ -37,3 +37,8 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 ***
 
 Note: For simpler table editing you can use https://www.tablesgenerator.com/markdown_tables
+
+
+## Features that depend on firmware versions:
+### EVO192 and EVOHD:
+* PGM control requires fw 4.75+
