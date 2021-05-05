@@ -7,6 +7,7 @@
 ## Requirements
 * Your panels [PC Password](./Configuration#pc-password)
 * Serial or IP150 connection.
+* Check user reported [compatibility](./Compatibility).
 
 ## Structure
 
