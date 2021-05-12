@@ -100,6 +100,7 @@ If you want to install new firmware check [Compatibility](./Compatibility) page 
 For IP150 firmware versions: **> 4.x**
 
 Reason for _(not recommended)_:
+* https://github.com/CriticalSecurity/paradox
 * Periodic dropouts/restarts
 * Possible banning (PAI keeps connection 24/7/365)
 * Hard to debug reconnection problems
