@@ -56,7 +56,7 @@ Your Hass.io instance `Supervisor` -> `System` -> `Host system` -> `Hardware` bu
 ---
 
 # IP module connection (IP100, IP150)
-PAI can communicate with the panel using IP100 or IP150 connection locally or via Paradox Cloud(SWAN).
+PAI can communicate with the panel using IP100, IP150, IP150+, IP150S connection locally or via Paradox Cloud(SWAN).
 
 SWAN connection is possible but is not recommended. Do not abuse it with PAI or Paradox can become angry some day.
 
