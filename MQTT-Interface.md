@@ -8,6 +8,16 @@ MQTT_HOST: 192.168.1.2                 # Hostname or address for your MQTT serve
 MQTT_PORT: 1883                        # TCP Port
 ```
 
+If using TLS, in addition to changing the MQTT_PORT, you will also need to expose the broker's CA certificate file to PAI's mqtt client
+
+```yaml
+MQTT_TLS_CERT_PATH: /etc/pai/certs/your_ca_crt_file.crt
+```
+
+If using a [self-signed certificate](http://www.steves-internet-guide.com/mosquitto-tls/) for your MQTT broker, the certificate file will be something like ca.crt
+
+If using proper SSL encryption with a service like Let’s Encrypt you may have to set the certificate to the operating system's own .crt certificates file (the operating system of the container in which PAI is running). In the instance of Ubuntu this would be certificate: /etc/ssl/certs/ca-certificates.crt
+
 # 
 
 The MQTT Interface allows accessing all relevant states and setting some. The list of states will increase as the knowledge of the alarm internal memory and its states is improved.
