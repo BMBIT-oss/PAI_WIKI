@@ -88,10 +88,13 @@ IP_CONNECTION_PASSWORD: paradox    # IP Module password. "paradox" is factory de
 **Make sure `IP_CONNECTION_SITEID` and `IP_CONNECTION_EMAIL` is NOT set. Otherwise PAI will work via Cloud (SWAN)**
 
 ### (optional) Lock IP150 firmware updates
+Notice: It was reported that IP module will start rebooting periodically if you fully disable all outbound connections for it.
+
+One of the options how to disable all outbound connections:
 1. Log in to the web interface and disable SWAN.
 2. Set your IP150 to a static IP and set gateway to 0.0.0.0
 
-This is to disable any future automatic updates as IP150 checks for updates on boot and it updates itself.
+This is to disable any future automatic updates as IP150 checks for updates on boot and updates itself.
 Once you get a stable connection you do not need new firmware versions.
 
 If you want to install new firmware check [Compatibility](./Compatibility) page to make sure latest version works with PAI.
