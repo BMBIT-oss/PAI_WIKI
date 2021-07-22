@@ -1,0 +1,2 @@
+Hey There Hopefully this is correct place to ask,
+So is it possible to diy some RF read switches to communicate back to a paradox RF receiver or has it been done if not is this a potential project the community working on and with Pai would be keen to take on. As it's fairly easy and cheep to make a wireless window read switch just the trick would be communicating back to the pardox receiver that probably uses some kind of rolling code. Or would it be possible to build a receiver that would communicate on the paradox com bus 
