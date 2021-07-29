@@ -10,7 +10,7 @@ In your Home Assistant installation add 3rd party add-on repository in the Add-o
 
 Install `Paradox Alarm Interface` version `1.3.1+` from there. There is also a development version available in this repository.
 
-Add new `pai` user in Mosquitto for PAI to use. Check your Mosquitto addon manual.
+Add new `pai` user in Mosquitto for PAI to use. Check [Mosquitto addon manual](https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md) how to do this.
 
 Configure the add-on in the configuration tab.
 
