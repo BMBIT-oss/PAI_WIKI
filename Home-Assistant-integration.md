@@ -2,7 +2,12 @@ We support Home Assistant with MQTT autodiscovery.
 Support was added in 1.1.0
 
 ## Requirements
-* MQTT Broker ([Mosquitto](https://mosquitto.org/) or other compatible)
+### MQTT Broker
+Options:
+* [Mosquitto](https://mosquitto.org/)
+* HomeAssistant OS [Mosquitto addon](https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md)
+
+You need to create a username+password pair for PAI that you will use in PAI configuration.
 
 ## Paradox Alarm Interface (PAI) add-on configuration:
 Enable the required module in the add-on configuration tab and all the other parameters.
