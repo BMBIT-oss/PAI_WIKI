@@ -167,6 +167,10 @@ You can follow the instructions edit and load the following:
 https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiTelnetToSerial/WiFiTelnetToSerial.ino
 once done and available on your network you can connect it to your wifi and test it/locate the IP.
 
+Updated code:
+https://github.com/cybertza/PAI-ESP32
+
+
 The following settings needs to be set in your config
 ```yaml
 # Connection Type
