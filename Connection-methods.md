@@ -169,6 +169,7 @@ once done and available on your network you can connect it to your wifi and test
 
 Updated code:
 https://github.com/cybertza/PAI-ESP32
+ * added ESPhome example as well (its not tested with pannel, but on the bench it works, it then leverages off the ESPHome stack to keep the device alive, can also add a relay to add to an Panic input if you wanted to do something to that effect).
 
 
 The following settings needs to be set in your config
