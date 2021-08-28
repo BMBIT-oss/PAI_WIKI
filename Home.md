@@ -70,8 +70,20 @@ In order to use this interface, please et the relevant configuration settings. T
 
 To send a command to the alarm use the format: ```type object command```. One example would be: ```partition outside arm```. If the ```object``` is all, the command will be sent to all objects of the same type (e.g., all partitions, all zones).
 
-#### IP Interface
+#### IP Interface (For Legacy Connections to Panel)
 
 The IP Interface mimics an IP150 module, allowing the use of standard alarm management tools to interact with the panel. It supports plain sessions or encrypted session as found in later versions of the IP150 module.
+
+This works in the Following Manner
+Software to Configure Alarm => PAI:10000 (port configured on container) named "For IP connection from Babyware" => Alarm Panel
+Conditions
+ * PAI needs to have an established connection to panel ( see log )
+ * Configuration Options need to be raised ( see advance configuration options ) (https://github.com/ParadoxAlarmInterface/pai/blob/4885439bbf80d1f168b8c95bc71494479ac32a33/config/pai.conf.example#L232) <- these are native and need to be padded into the config file type you use
+in Home Assistant:
+
+`IP_INTERFACE_ENABLE: true`
+`IP_INTERFACE_PASSWORD = 'paradox'`
+and in the network section
+The port used there for entry into the software you use.
 
 __When a client is connected to this interface, PAI will operate as a proxy. Most features and interfaces will be disabled until the client disconnects__
