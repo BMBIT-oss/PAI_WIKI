@@ -1,4 +1,6 @@
 ## User reported hardware attempted with PAI
+## Firmware Upgrade WARNING:
+**Do not upgrade EVO firmware versions to 7.50.000+. Process is irreversible! Paradox introduces serial communication encryption which most probably will break our PAI ability to talk to the panel.**
 ### Supported
 Other versions may be also supported. If PAI works with your panel, and the model-version combination is not listed, please edit the next table.
 
