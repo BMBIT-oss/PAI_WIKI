@@ -20,6 +20,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | MG5050 | 4.96    | -         | 4.40      | ✓          | -    | ✓      |                                |
 | MG5050 | 4.72    | -         | 1.26      | ✓          | -    | -      |                                |
 | MG5050 | 6.80    | -         | 4.40      | ✓          | -    | ✓      |                                |
+| MG5050 | 7.15.002| -         | 4.40.04   | ✓          | -    | -      | PID83h_V7_15_002_RF_V2_02_018_SPECTRUM  |
 | MG5050 | 7.01.012| -         | 5.02.019  | ✓          | -    | -      | IP150 firmware 5.02.019        |
 | MG5075 | 1.3 build 8 | -     | -         | ✓          | -    | -      | 307USB                         |
 | SP4000 | 5.20    | -         | 5.02.019  | ✓          | -    | ✓      |                                |
