@@ -13,6 +13,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | EVOHD  | 7.31        | 5.20.0E   | -        |        | ✓          | -    | ✓      | Works with Serial via ESP32                                                              |
 | EVO48  | 2.20        | 5.10      | -        |        | ✓          | -    | -      |                                                                                          |
 | EVO192 | 2.66        | 5.10.06   | -        |        | ✓          | -    | -      |                                                                                          |
+| EVO192 | 3.20        | -         | 5.3      |        | ✓          | -    | -      |                                                                                          |
 | EVO192 | 6.86        | 5.10      | -        |        | ✓          | -    | -      |                                                                                          |
 | EVO192 | 6.90        | 5.1.0     | 1.32     |        | ✓          | -    | ✓      |                                                                                          |
 | EVO192 | 7.30        | -         | 1.32     |        | ✓          | -    | ✓      |                                                                                          |
