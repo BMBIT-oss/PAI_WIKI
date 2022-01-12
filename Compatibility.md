@@ -20,6 +20,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | EVO192 | 7.30        | -         | 4.42     |        | ✓          | -    | -      |                                                                                          |
 | EVO192 | 7.31        | -         | -        | 5.05   | ✓          | -    | -      |                                                                                          |
 | EVO192 | 7.52.001    | -         | 1.34.000 |        | ✓          | -    | -      | [#272](https://github.com/ParadoxAlarmInterface/pai/issues/272) This panel FW has encrypted serial but connects fine via IP150|
+| EVO192 | 7.70.018    | -         |  | 5.05.003 | ✓          | -    | -      | [#272](https://github.com/ParadoxAlarmInterface/pai/issues/272) This panel FW has encrypted serial but connects fine via IP150|
 | MG5050 | 4.96        | -         | 4.40     |        | ✓          | -    | ✓      |                                                                                          |
 | MG5050 | 4.72        | -         | 1.26     |        | ✓          | -    | -      |                                                                                          |
 | MG5050 | 6.80        | -         | 4.40     |        | ✓          | -    | ✓      |                                                                                          |
