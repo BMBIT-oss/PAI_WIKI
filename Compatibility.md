@@ -34,8 +34,8 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 | SP5500 | 4.94        | -         | -        |        | ✓          | -    | ✓      | Works with Serial via ESP32                                                              |
 | SP5500 | 7.14.002    | -         | -        |        | ✓          | -    | ✓      | USB to Serial via FTDI                                                                   |
 | SP6000 | 4.15        | -         | -        |        | -          | -    | ✓      |                                                                                          |
-| SP6000 | 6.80        | -         | 5.02     |        | ✓          | ✓    | -      | More stable with SWAN disabled                                                           |
 | SP6000 | 4.54        | -         | -        | ✓      | ✓          | -    | -      | IP150+ working.                                                                          |
+| SP6000 | 6.80        | -         | 5.02     |        | ✓          | ✓    | -      | More stable with SWAN disabled                                                           |
 | SP6000 | 7.14.002    | -         | 5.02.19  | -      | ✓          | -    | -      |                                                                           |
 | SP7000 | 5.18        | 5.20      | -        |        | ✓          | -    | -      |                                                                                          |
 | SP7000 | 5.20        | -         | 4.40     |        | ✓          | -    | -      |                                                                                          |
