@@ -52,7 +52,7 @@ Other versions may be also supported. If PAI works with your panel, and the mode
 #### Note:
 For simpler table editing you can use https://www.tablesgenerator.com/markdown_tables
 
-Copy only table block to the editor. Use Preview tab before submitting the change.
+Copy only table to the editor. Not the whole page. Use Preview tab before submitting the change.
 
 ## Features that depend on firmware versions:
 ### EVO192 and EVOHD:
